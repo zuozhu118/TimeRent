@@ -1,0 +1,92 @@
+﻿body {
+  /* _behavior: url("css/csshover3.htc");*/
+}
+a {
+	text-decoration: none;
+}
+#navMenu {
+	background-color:#333; overflow:hidden;
+	width:100%;
+	height: 70px;
+	line-height: 70px;
+	display:block;
+	overflow:hidden;
+	/*background-image: url(../image/nav_bg.jpg);
+	background-repeat:repeat-x;
+	background-position: left top;*/
+}
+.menu1 { z-index:6; margin-left:50px;}
+.menu1,.menu1 UL {
+	padding:0px;
+	margin:0px;
+	list-style-type: none;
+}
+.menu1 LI,.menu1 a{HEIGHT: 70px; LINE-HEIGHT: 70px;FLOAT: left;}
+/*.menu1 LI {padding:0px; MARGIN: 0px;
+	background-image: url(../image/nav_fg.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	margin-left: -2px;}*/
+.menu1 a{ margin:0 10px;
+	DISPLAY: block;  
+	FONT-SIZE: 16px;  
+	color:white;
+	FONT-FAMILY:"微软雅黑" ;
+	TEXT-ALIGN: center; 
+}
+.menu1 LI:hover,.menu1 A:hover {
+	color:#74c522;  
+}
+.menu1 LI a:hover {
+	background-image: url(../image/hover_bg.jpg);
+	background-repeat:repeat-x;
+	background-position: center top;
+	text-decoration: none;
+	}
+.menu1 LI ul li a:hover{ background-image:none;}
+.menu1 LI UL {MARGIN-LEFT: -999em; POSITION: absolute}
+.menu1 LI UL li,.menu1 LI UL li a{
+	line-height:24px;
+	height:24px;
+	background-image:none;}
+.menu1 LI:hover UL,.menu1 LI.sfhover UL {
+	MARGIN-TOP:70px;
+	padding:0px;
+	Z-INDEX: 999; 
+	/*FILTER: alpha (opacity=90);*/ 
+	MARGIN-LEFT: 0px; 
+	WIDTH: 80px; 
+	/*BORDER-BOTTOM: #0D1C31 1px solid;*/ 
+	POSITION: absolute; 
+	background-color:#313131; 
+	opacity: 0.90;
+	+CLEAR: both; +MARGIN-TOP: 0px;
+	_clear:both; _margin-top:0px;
+}
+.menu1 LI:hover UL LI A,.menu1 LI.sfhover UL LI A{
+	/*BORDER-RIGHT: #999 1px solid;*/ 
+	DISPLAY: block; 
+
+	FONT-WEIGHT: normal; 
+	FONT-SIZE: 14px; 
+	MARGIN: 0px; 
+	TEXT-TRANSFORM: none; 
+	WIDTH: 80px; 
+	color:white; 
+	TEXT-ALIGN:center;
+}
+.menu1 LI:hover UL LI A:hover,.menu1 LI.sfhover UL LI A:hover {
+	/*BORDER-TOP: #6CA7C7 1px solid;
+	BORDER-BOTTOM: white 1px solid;*/  
+	COLOR: #74c522;
+}
+.menu1 UL LI UL {DISPLAY: none;}
+.menu1 UL LI UL LI A:hover {
+	MARGIN-TOP: -2px; 
+	DISPLAY: block; 
+	FILTER: alpha (opacity=85); 
+	MARGIN-LEFT: 50px; 
+	WIDTH: 105px; 
+	POSITION: absolute; 
+	BACKGROUND-COLOR: #666;
+}

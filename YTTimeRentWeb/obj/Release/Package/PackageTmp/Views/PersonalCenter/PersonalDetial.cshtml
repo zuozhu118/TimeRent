@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "PersonalDetial";
+}
+
+<script src="~/Scripts/jquery-1.12.0.min.js"></script>
+<link href="~/Content/PersonalCenter/personaldetial.css" rel="stylesheet" />
+@*<h1>个人中心详情页</h1>*@
+<form action="/BasicMsg/BtnAlipay_Click" method="post" name="form1" id="formId">
+    <div class="container">
+        <div class="part1">
+            <p>
+                <span class="orderstat" id="orderstat">@Model.OrderStatus</span>订单总价：<span class="price">￥<span>@Model.TotalPrice</span></span>
+            </p>
+            <p>
+                订单号：<span id="ordernum">@Model.OrderNum</span>&nbsp;&nbsp;|&nbsp;&nbsp<span>租车人：@Model.AccountName</span>&nbsp;&nbsp;|&nbsp;&nbsp<span>租车时间：@Model.Rentcounttime</span>
+            </p>
+        </div>
+        <div class="part2">
+            <p class="basicmsgP">基本信息</p>
+            <div class="carimg">
+                <img src="@Model.carimg" alt="路径" />
+            </div>
+            <div class="timeplace">
+                <p><strong>取车地点：</strong><span class="city">@Model.PICCity</span><span>@Model.PickupShop_Name</span></p>
+                <p><strong>取车时间：</strong><span>@Model.StartTime</span></p>
+                <p><strong>还车地点：</strong><span class="city">@Model.RETCity</span><span>@Model.ReturnShop_Name</span></p>
+                <p><strong>还车时间：</strong><span>@Model.EndTime</span></p>
+            </div>
+        </div>
+        <div class="part3">
+            <p class="basicmsgP">费用明细</p>
+            <p class="deposit"><strong>车辆租金</strong><span>￥@Model.BudgetCost</span></p>
+           @* <p class="deposit"><strong>基本保险费用</strong><span>￥@Model.Insurance</span></p>*@
+
+            @*<p class="deposit"><strong>违章押金</strong><span>￥@Model.PeccancyDeposit</span></p>
+            <p class="deposit"><strong>租车押金</strong><span>￥@Model.CarDeposit</span></p>*@
+            
+            <p class="deposit"><strong>押金</strong><span>￥@Model.RentDeposit</span></p>
+
+            <p class="totalprice">
+                <span>订单总价：<span>￥@Model.TotalPrice</span></span>
+            </p>
+        </div>
+        <p class="btnP">
+            <input type="button" name="name" value="退出" onclick="Closeorder_Click()" />
+            <input type="button" id="paybtn" name="name" value="去支付" style="display:none;" onclick="BtnAlipay_Click()" />
+        </p>
+    </div>
+</form>
+<script type="text/javascript">
+    $(function () {
+        PayBlock();
+
+    });
+    function PayBlock() {
+        var state = $('#orderstat').html();
+        if (state == "待支付") {
+            $('#paybtn').css('display', 'inline-block');
+        }
+
+    }
+    function BtnAlipay_Click() {
+        var ordernum = $('#ordernum').html();
+        var Form = $("#formId")
+        
+        $.post("/BasicMsg/IsPayed", { ordernum: ordernum }, function (data) {
+            if (data == "预订单未支付") {
+                Form.attr("action", "/BasicMsg/BtnAlipay_Click?ordernum=" + ordernum + "");
+                Form.submit();
+            }
+            else {
+                alert(data);
+            }
+        });
+    }
+    function Closeorder_Click() {
+
+        window.close();
+    }
+</script>

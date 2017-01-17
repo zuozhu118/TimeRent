@@ -1,0 +1,165 @@
+﻿*
+{
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: "黑体";
+}
+
+.container
+{
+    width: 900px;
+    margin: 20px auto;
+    line-height: 2;
+}
+
+    .container > div
+    {
+        margin-bottom: 30px;
+        overflow: hidden;
+        border: 1px solid #b5b5b5;
+    }
+
+.carimg
+{
+    width: 25%;
+    height: 145px;
+    float: left;
+    border-right: 1px solid #b5b5b5;
+    text-align:center;
+}
+
+    .carimg img
+    {
+        width: 85%;
+        height: 85%;
+    }
+
+.timeplace
+{
+    /*border:1px solid green;*/
+    float: left;
+    width: 75%;
+}
+
+    .timeplace p
+    {
+        width: 50%;
+        float: left;
+    }
+
+.part1
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.orderstat
+{
+    font-size: 24px;
+    color: #666666;
+    margin-right: 20px;
+    line-height:0px;
+}
+
+.part1 > p:first-child
+{
+    line-height: 5;
+    border-bottom: 1px dashed;
+}
+
+.part1 > p:last-child
+{
+    line-height: 3;
+}
+
+.price
+{
+    color: #ff7621;
+}
+
+    .price span
+    {
+        font-size: 24px;
+    }
+
+.basicmsgP
+{
+    line-height: 2.5;
+    background: #74c621;
+    color: #fff;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.city
+{
+    margin-right: 15px;
+}
+
+.timeplace
+{
+    padding-left: 40px;
+    line-height: 4;
+    margin-top: 15px;
+}
+
+.deposit
+{
+    line-height: 4;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px dashed;
+}
+
+    .deposit strong
+    {
+        font-size: 18px;
+    }
+
+    .deposit span
+    {
+        /*float:right;*/
+        line-height: 4;
+        position: absolute;
+        right: 0px;
+        font-size: 18px;
+        color: #ff7621;
+        /*border:1px solid;*/
+    }
+
+.totalprice
+{
+    height: 77px;
+    position: relative;
+}
+
+    .totalprice > span
+    {
+        position: absolute;
+        line-height: 5;
+        right: 20px;
+    }
+
+        .totalprice > span span
+        {
+            font-size: 18px;
+            color: #ff7621;
+        }
+.btnP
+{
+    text-align:center;
+}
+    .btnP input[type=button]
+    {
+        height:40px;
+        width:100px;
+        border-radius:8px;
+        line-height:40px;
+        font-size:16px;
+        background-color: #e1e1e1;
+        color:#575757;
+      
+        border:1px solid;
+    }

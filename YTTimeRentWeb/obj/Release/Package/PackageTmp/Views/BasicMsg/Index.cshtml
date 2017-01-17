@@ -1,0 +1,272 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    string MONEY = Session["MONEY"].ToString();//账户余额； 
+          
+}
+
+<script src="~/Scripts/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5cqW9gRejdYjxQkfkyuwEqyq"></script>
+<link href="~/Content/BasicMsg/BasicMsgStyle.css" rel="stylesheet" />
+<form action="/" target="_blank" method="post" name="form1" id="formId">
+    <div class="TheBigest">
+        <div class="TheLeft">
+            <div class="TheLeft-one">
+                <p class="basicmsgP">基本信息</p>
+                <div id="carimg" class="carimg">
+                    <img src="@Model.carimg" alt="路径错误" />
+                </div>
+                <div class="shoptime">
+                    <p><strong>取车地点：</strong><span id="piccityID">@Model.piccity</span><span>@Model.picshop</span></p>
+                    <p><strong>还车地点：</strong><span>@Model.retcity</span><span>@Model.retshop</span></p>
+                    <p><strong>取车时间：</strong><span>@Model.PickTime</span></p>
+                    <p><strong>还车时间：</strong><span>@Model.RetTime</span></p>
+                </div>
+                <div class="Order">
+                    @*<span id="carname" style="display:none">@carname</span>*@ 订单号：<span id="ordernum">@Model.OrderNum</span>&nbsp;&nbsp;|&nbsp;&nbsp<span>租车人：@Model.RENTMAN</span>&nbsp;&nbsp;|&nbsp;&nbsp<span>租车时间：@Model.hourcounts</span>
+                </div>
+            </div>
+            <div class="TheLeft-two">
+                <p class="basicmsgP">费用明细</p>
+
+                <p class="deposit"><strong>车辆租金</strong><span>￥@Model.costTotal</span></p>
+               @* <p class="deposit"><strong>基本保险费用</strong><span>￥@Model.insurance</span></p>*@
+
+
+@*                <p class="deposit"><strong>违章押金</strong><span>￥@Model.PeccancyDepositPeccancyDeposit</span></p>
+                <p class="deposit"><strong>租车押金</strong><span>￥@Model.CarDeposit</span></p>
+                *@
+
+                <p class="deposit"><strong>押金</strong><span>￥@Model.RentDeposit</span></p>  @*暂定将押金定为1500元（2016/10/11)*@
+
+                <p class="invoice">
+                    <img src="~/Images/fp1_03.png" id="invoiceimg" onclick="InvoiceimgClick()" />
+                    <span><strong>需要发票</strong></span><span class="tishi">(&nbsp 费用结算后为您寄出 &nbsp)</span>
+                </p>
+                <div class="invoiceMsg" id="invoiceMsgID">
+                    <p>发票抬头<input type="text" name="name" placeholder="个人/单位" class="invoicefirst" /></p>
+                    <p>收件人<input type="text" name="name" /></p>
+                    <p>手机号码<input type="text" name="name" /></p>
+                    <p class="adressselect"><strong>收件地址</strong><select id="ProvinceID" name="Province" onchange="ProvinceChange(form1.City)" class="selectone"></select><select id="CityID" name="City" onchange="CityChange(form1.Country)" class="selecttwo"></select><select id="CoutryID" name="Country" class="selecttwo"></select></p>
+                    <p>
+                        <input type="text" name="name" placeholder="请填写准确地址" class="zhunqueadress" /><input type="text" name="name" placeholder="邮政编码" class="youzheng" />
+                    </p>
+                </div>
+
+                <div class="payway" id="payway">
+                    <div class="payway-div0">请选择支付方式</div>
+                    <div class="payway-div1">
+                        <input type="radio" name="name" value="支付宝" checked="checked" id="zfb" />支付宝<p class="p1">支付&nbsp<span class="paycount" id="paycount">@Model.OrderTotalPrice</span>&nbsp元</p>
+                    </div>
+                    <div class="payway-div2">
+                        <input type="radio" name="name" value="余额" id="ye" />账户余额 <span class="paycount"><span id="yuecount">@MONEY </span>元</span><p class="p2" style="visibility:hidden">余额不足，<a href="#">去充值？</a></p>
+                    </div>
+                </div>
+
+                <p class="ordertotalprice">订单总价：￥<span id="orderprice">@Model.OrderTotalPrice</span><input type="button" name="name" value="立即支付" style="background-color: #74c621;" onclick="BtnAlipay_Click()" /></p>
+                <input type="hidden" name="WIDout_trade_no" value="@Model.OrderNum " />
+                <input type="hidden" name="WIDsubject" value="众驾租车" />
+               @* <input type="hidden" name="WIDtotal_fee" value="0.01" />*@
+                <input type="hidden" name="WIDtotal_fee" value="@Model.OrderTotalPrice" />
+                <input type="hidden" name="WIDbody" value="及时到账" />
+            </div>
+        </div>
+        <div class="TheReight">
+            <div class="baiduMAP" id="baiduMAP">
+                <input type="hidden" id="picLongitudeID" name="name" value="@Model.picLongitude" />
+                <input type="hidden" id="picLatitudeID" name="name" value="@Model.picLatitude" />
+                @*<input type="hidden" id="retLongitudeID" name="name" value="@retLongitude" />
+                <input type="hidden" id="retLatitudeID" name="name" value="@retLatitude" />*@
+            </div>
+            <div class="TheReightone">
+                <div class="adress">
+                    <p><strong>@Model.piccity</strong><strong>@Model.picshop</strong></p>
+                    <p>门店（取车）地址：<span>@Model.picadress</span></p>
+                    <p>还车地址：<span></span>@Model.retadress</p>
+                </div>
+                <div class="feiyong">
+                    <strong>超时计费</strong>
+                    <p>到时未归还车辆，除需正常支付租金外，您还需按超时部分租金的200%支付超时费用。</p>
+                    <strong>温馨提示</strong>
+                    <p>订单支付完成后，请您在预约的取车时间之前取车，若超时取消订单，将扣除相应的超时费用。</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(function () {
+        Banlance();
+        InitBaiduMap();
+        InitProvince(form1.Province);
+        //RadioChange();
+        $('input:radio').change(function () {
+            RadioChange();
+        });
+    });
+    function Banlance() {
+        var orderprice = $('#orderprice').html();
+        var yuecount = $('#yuecount').html();
+        orderprice = parseFloat(orderprice);
+        yuecount=parseFloat(yuecount)
+        if (yuecount < orderprice) {
+            $('.p2').css('visibility', 'visible');
+            return false;//余额不足
+        }
+        else {
+            return true;
+        }
+
+    }
+
+    function InitBaiduMap() {
+        var picLongitude = $("#picLongitudeID").val();
+        var picLatitude = $("#picLatitudeID").val();
+        var city = $("#piccityID").html();
+        //var retLongitude = $("#retLongitudeID").val();
+        //var retLatitude = $("#retLatitudeID").val();
+
+        //=======根据城市名设置地图中心点=============
+        var map = new BMap.Map("baiduMAP");  // 创建Map实例
+        map.centerAndZoom(city);      // 初始化地图,用城市名设置地图中心点
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        var point = new BMap.Point(picLongitude, picLatitude);//根据坐标创建点位置；
+        //alert(point);
+        ////创建自定义图片====
+        var myIcon = new BMap.Icon("/Images/web_03.png", new BMap.Size(50, 50));
+        var marker2 = new BMap.Marker(point, { icon: myIcon });  // 创建标注
+        map.addOverlay(marker2);
+    }
+
+    var a = 2;//表示照片当前的状态；
+    function InvoiceimgClick() {
+        var img = $("#invoiceimg");//获取图片对象；
+        var src = img.attr("src");//获取照片的src路径；
+        if (a == 2) {
+            $("#invoiceMsgID").css("display", "block");
+            src = "/Images/fp_03.png";
+            img.attr("src", src);
+            a--;
+        }
+        else {
+            $("#invoiceMsgID").css("display", "none");
+            src = "/Images/fp1_03.png";
+            img.attr("src", src);
+            a++;
+        }
+    }
+
+    //ParsingJsonData解析返回的JSON格式的数据，并将返回数据添加到Select标签中；
+    function ParsingJsonData(NAME, data) {//NAME表示所有的省，市，区的Select标签对象，data表示返回的JSON格式数据；
+        var img = {};//所有省份/城市/区的名称
+        var str1 = data.list;
+        var json1 = eval("(" + str1 + ")");
+        for (var i = 0; i < json1.length; i++) {
+            img[i] = json1[i].name;
+            //alert(json1[i].name);
+            NAME.options[i] = new Option(img[i]);
+            NAME.options[i].value = json1[i].id;
+        }
+
+    }
+    function InitProvince(Provinces) {
+        $.post("/BasicMsg/GetAllProvinces", {}, function (data) {
+            ParsingJsonData(Provinces, data);
+            ProvinceChange(form1.City);//省的改变事件,初始化市；
+        });
+
+    }
+    function ProvinceChange(Citys) {
+        Citys.length = 0;
+        var province = $("#ProvinceID").find("option:selected").text();//选中的省名
+        var ProvinceID = $("#ProvinceID").find("option:selected").val();//选中的省名的Id;
+        $.post("/BasicMsg/GetCityByProvince", { id: ProvinceID }, function (data) {
+            ParsingJsonData(Citys, data);//将返回的城市名加载到select标签上；
+
+            CityChange(form1.Country);//市的改变事件，初始化区；
+        });
+    }
+    function CityChange(Countrys) {
+        Countrys.length = 0;
+        var cityid = $("#CityID").find("option:selected").val();
+        $.post("/BasicMsg/GetCountry", { id: cityid }, function (data) {
+            ParsingJsonData(Countrys, data);
+
+        });
+    }
+
+    function BtnAlipay_Click() {
+        var OrderNum = $('#ordernum').html();//订单号；
+        var payway = $("#payway input:checked").val();
+        var Form = $("#formId")
+        if (payway != '支付宝') { //余额支付
+            var ye = Banlance();
+            if (ye==false) {
+                alert('余额不足，请充值');
+                return false;
+            }
+            else {
+                $.post("/BasicMsg/IsPayed", { ordernum: OrderNum }, function (data) {
+                    if (data == "预订单未支付") {
+                        $.post("/BasicMsg/YuEPay", { ordernum: OrderNum }, function (data) {
+                            if (data == "支付成功") {
+                                window.open("/PersonalCenter/Index");
+                            }
+                            else if (data == "押金不足") {
+                                alert("押金不足，请冲押金");
+                                return false;
+                            }
+                            else { 
+                                return false;
+                            }
+                        });
+                    }
+                    else {
+                        alert(data);
+                    }
+
+                });
+            }
+        }
+        else {
+            //$.ajax({
+            //    url: "/BasicMsg/BtnAlipay_Click",
+            //    asyn: true,//异步请求
+            //    data: ordernum,//给后台传递的参数
+            //    dataType: "json",//后台返回数据类型
+            //    type: "post",//请求类型;
+            //    success: function (data) {
+            //        //Addtbodydata(data);
+            //        alert(data);
+            //    }
+            //});
+            $.post("/BasicMsg/IsPayed", { ordernum: OrderNum }, function (data) {
+                //alert(55);
+                if (data == "预订单未支付") {
+                    Form.attr("action", "/BasicMsg/BtnAlipay_Click?ordernum=" + OrderNum + "");
+                    Form.submit();
+                    //window.location.href = "/PersonalCenter/Index";
+                }
+                else {
+                    alert(data);
+                }
+            });
+        }
+    }
+
+    function RadioChange() {
+        var payway = $("#payway input:checked").val();
+        if (payway == '支付宝') {
+            //alert("选中支付宝")
+            $('.p1').css('visibility', 'visible');
+        }
+        else {
+            //alert("余额选中");
+            $('.p1').css('visibility','hidden');
+        }
+
+    }
+</script>

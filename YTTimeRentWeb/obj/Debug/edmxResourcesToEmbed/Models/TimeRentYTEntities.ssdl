@@ -1,0 +1,1321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TimeRentModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TimeRentModelStoreContainer">
+    <EntitySet Name="Acc_Classify" EntityType="TimeRentModel.Store.Acc_Classify" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Acc_Fran_Bind" EntityType="TimeRentModel.Store.Acc_Fran_Bind" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Acc_Shop_Bind" EntityType="TimeRentModel.Store.Acc_Shop_Bind" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Account" EntityType="TimeRentModel.Store.Account" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdditionDicBind" EntityType="TimeRentModel.Store.AdditionDicBind" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdditionMoney" EntityType="TimeRentModel.Store.AdditionMoney" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdditionMoneySeriel" EntityType="TimeRentModel.Store.AdditionMoneySeriel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="APPVersionManagement" EntityType="TimeRentModel.Store.APPVersionManagement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditRecord" EntityType="TimeRentModel.Store.AuditRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Balances" EntityType="TimeRentModel.Store.Balances" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BalanceSeriel" EntityType="TimeRentModel.Store.BalanceSeriel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CancelOrder" EntityType="TimeRentModel.Store.CancelOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CancelRule" EntityType="TimeRentModel.Store.CancelRule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Car_Class" EntityType="TimeRentModel.Store.Car_Class" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CarDeposit" EntityType="TimeRentModel.Store.CarDeposit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CarLeasePrice" EntityType="TimeRentModel.Store.CarLeasePrice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CarLog" EntityType="TimeRentModel.Store.CarLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CarRentalUsersClassify" EntityType="TimeRentModel.Store.CarRentalUsersClassify" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cars" EntityType="TimeRentModel.Store.Cars" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cars_Reserved" EntityType="TimeRentModel.Store.Cars_Reserved" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CarTBoxRelationShip" EntityType="TimeRentModel.Store.CarTBoxRelationShip" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChargeSeriel" EntityType="TimeRentModel.Store.ChargeSeriel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CompanyPersonalBinding" EntityType="TimeRentModel.Store.CompanyPersonalBinding" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Coupon" EntityType="TimeRentModel.Store.Coupon" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CouponAccountBind" EntityType="TimeRentModel.Store.CouponAccountBind" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CouponDicBind" EntityType="TimeRentModel.Store.CouponDicBind" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DamageInspection" EntityType="TimeRentModel.Store.DamageInspection" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DamageInspectionRules" EntityType="TimeRentModel.Store.DamageInspectionRules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DayPriceRule" EntityType="TimeRentModel.Store.DayPriceRule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DepositRelation" EntityType="TimeRentModel.Store.DepositRelation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DevicesRecord" EntityType="TimeRentModel.Store.DevicesRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DicountTable" EntityType="TimeRentModel.Store.DicountTable" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Dictionary" EntityType="TimeRentModel.Store.Dictionary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DictionaryDetail" EntityType="TimeRentModel.Store.DictionaryDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiscountPic" EntityType="TimeRentModel.Store.DiscountPic" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoorPassword" EntityType="TimeRentModel.Store.DoorPassword" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExtraFee" EntityType="TimeRentModel.Store.ExtraFee" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExtraFee_Instance" EntityType="TimeRentModel.Store.ExtraFee_Instance" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FaultHandlingRecord" EntityType="TimeRentModel.Store.FaultHandlingRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Feedback" EntityType="TimeRentModel.Store.Feedback" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FestivalDates" EntityType="TimeRentModel.Store.FestivalDates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Franchisees" EntityType="TimeRentModel.Store.Franchisees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GroupAccount" EntityType="TimeRentModel.Store.GroupAccount" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GroupBalance" EntityType="TimeRentModel.Store.GroupBalance" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GroupBalanceFlow" EntityType="TimeRentModel.Store.GroupBalanceFlow" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InsuranceSeriel" EntityType="TimeRentModel.Store.InsuranceSeriel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Invoice" EntityType="TimeRentModel.Store.Invoice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InvoiceTemplate" EntityType="TimeRentModel.Store.InvoiceTemplate" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Menu" EntityType="TimeRentModel.Store.Menu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuRights" EntityType="TimeRentModel.Store.MenuRights" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MoneyProportion" EntityType="TimeRentModel.Store.MoneyProportion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Order" EntityType="TimeRentModel.Store.Order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderChange" EntityType="TimeRentModel.Store.OrderChange" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderMsg" EntityType="TimeRentModel.Store.OrderMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Partners" EntityType="TimeRentModel.Store.Partners" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PayMethod" EntityType="TimeRentModel.Store.PayMethod" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PeccancyDeposit" EntityType="TimeRentModel.Store.PeccancyDeposit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PeccancyInspection" EntityType="TimeRentModel.Store.PeccancyInspection" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonalDepositUsage" EntityType="TimeRentModel.Store.PersonalDepositUsage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pickup_Return" EntityType="TimeRentModel.Store.Pickup_Return" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PostageInvoiceRelationship" EntityType="TimeRentModel.Store.PostageInvoiceRelationship" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Privilege" EntityType="TimeRentModel.Store.Privilege" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrivilegeRelation" EntityType="TimeRentModel.Store.PrivilegeRelation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PromotionPic" EntityType="TimeRentModel.Store.PromotionPic" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Provinces" EntityType="TimeRentModel.Store.Provinces" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RechargeRecord" EntityType="TimeRentModel.Store.RechargeRecord" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistTextMsg" EntityType="TimeRentModel.Store.RegistTextMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RentCarPackage" EntityType="TimeRentModel.Store.RentCarPackage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RentCarShopBind" EntityType="TimeRentModel.Store.RentCarShopBind" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReturnCar" EntityType="TimeRentModel.Store.ReturnCar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SecurityDeposit" EntityType="TimeRentModel.Store.SecurityDeposit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SecurityDepositSeriel" EntityType="TimeRentModel.Store.SecurityDepositSeriel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Shop_Manage" EntityType="TimeRentModel.Store.Shop_Manage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ShopAdmin" EntityType="TimeRentModel.Store.ShopAdmin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ShopRentPrice" EntityType="TimeRentModel.Store.ShopRentPrice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Shops" EntityType="TimeRentModel.Store.Shops" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SMSTextMsg" EntityType="TimeRentModel.Store.SMSTextMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SpecialVehicleUsage" EntityType="TimeRentModel.Store.SpecialVehicleUsage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SystemMessage" EntityType="TimeRentModel.Store.SystemMessage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TBoxPassword" EntityType="TimeRentModel.Store.TBoxPassword" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TextMsg" EntityType="TimeRentModel.Store.TextMsg" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimeGradientPrice" EntityType="TimeRentModel.Store.TimeGradientPrice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimeOutOrder" EntityType="TimeRentModel.Store.TimeOutOrder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnitTimePriceRule" EntityType="TimeRentModel.Store.UnitTimePriceRule" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsefulCarRemind" EntityType="TimeRentModel.Store.UsefulCarRemind" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="TimeRentModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserDeposit" EntityType="TimeRentModel.Store.UserDeposit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserDepositSeriels" EntityType="TimeRentModel.Store.UserDepositSeriels" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserZMXY" EntityType="TimeRentModel.Store.UserZMXY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VehicleFaultInfo" EntityType="TimeRentModel.Store.VehicleFaultInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VehicleVerificationCode" EntityType="TimeRentModel.Store.VehicleVerificationCode" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personal_Order" EntityType="TimeRentModel.Store.Personal_Order" store:Type="Views" store:Schema="dbo" store:Name="Personal_Order">
+      <DefiningQuery>SELECT 
+      [Personal_Order].[Id] AS [Id], 
+      [Personal_Order].[PickupShopName] AS [PickupShopName], 
+      [Personal_Order].[PickupShopAddress] AS [PickupShopAddress], 
+      [Personal_Order].[PickupShopCity] AS [PickupShopCity], 
+      [Personal_Order].[ReturnShopName] AS [ReturnShopName], 
+      [Personal_Order].[ReturnShopAddress] AS [ReturnShopAddress], 
+      [Personal_Order].[ReturnShopCity] AS [ReturnShopCity], 
+      [Personal_Order].[CarName] AS [CarName], 
+      [Personal_Order].[OrderNum] AS [OrderNum], 
+      [Personal_Order].[OrderStatus] AS [OrderStatus], 
+      [Personal_Order].[StartTime] AS [StartTime], 
+      [Personal_Order].[EndTime] AS [EndTime], 
+      [Personal_Order].[CreatTime] AS [CreatTime], 
+      [Personal_Order].[OrderMoney] AS [OrderMoney], 
+      [Personal_Order].[BudgetCost] AS [BudgetCost], 
+      [Personal_Order].[OrderDeposit] AS [OrderDeposit], 
+      [Personal_Order].[Account_Id] AS [Account_Id], 
+      [Personal_Order].[CarPic] AS [CarPic], 
+      [Personal_Order].[Name] AS [Name], 
+      [Personal_Order].[Expr2] AS [Expr2], 
+      [Personal_Order].[PayStatus] AS [PayStatus], 
+      [Personal_Order].[Balance] AS [Balance], 
+      [Personal_Order].[PayWay] AS [PayWay]
+      FROM [dbo].[Personal_Order] AS [Personal_Order]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Shop_Car_View" EntityType="TimeRentModel.Store.Shop_Car_View" store:Type="Views" store:Schema="dbo" store:Name="Shop_Car_View">
+      <DefiningQuery>SELECT 
+      [Shop_Car_View].[Id] AS [Id], 
+      [Shop_Car_View].[Name] AS [Name], 
+      [Shop_Car_View].[CarName] AS [CarName], 
+      [Shop_Car_View].[CarClass_Id] AS [CarClass_Id], 
+      [Shop_Car_View].[Appoint_stime] AS [Appoint_stime], 
+      [Shop_Car_View].[Appoint_etime] AS [Appoint_etime], 
+      [Shop_Car_View].[Car_Id] AS [Car_Id], 
+      [Shop_Car_View].[Status] AS [Status], 
+      [Shop_Car_View].[Code] AS [Code]
+      FROM [dbo].[Shop_Car_View] AS [Shop_Car_View]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="Acc_Classify">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClassifyName" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Acc_Fran_Bind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountID" Type="bigint" Nullable="false" />
+    <Property Name="FranchiseeID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Acc_Shop_Bind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountID" Type="bigint" Nullable="false" />
+    <Property Name="ShopAdminID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RegisterTime" Type="datetime" Nullable="false" />
+    <Property Name="Classify" Type="int" />
+  </EntityType>
+  <EntityType Name="AdditionDicBind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AdditionID" Type="bigint" Nullable="false" />
+    <Property Name="DicID" Type="bigint" Nullable="false" />
+    <Property Name="DicDetailID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdditionMoney">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Describe" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="PayMoney" Type="money" Nullable="false" />
+    <Property Name="BackMoney" Type="money" Nullable="false" />
+    <Property Name="Count" Type="int" Nullable="false" />
+    <Property Name="Starttime" Type="datetime" Nullable="false" />
+    <Property Name="Endtime" Type="datetime" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreateAccountID" Type="bigint" Nullable="false" />
+    <Property Name="S_Status" Type="int" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="StoreID" Type="bigint" />
+    <Property Name="SiteID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AdditionMoneySeriel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="ChargeSeriea_Id" Type="bigint" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="APPVersionManagement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Version" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="OperatorID" Type="bigint" Nullable="false" />
+    <Property Name="IsNecessary" Type="int" Nullable="false" />
+    <Property Name="UpdateUrl" Type="text" Nullable="false" />
+    <Property Name="Notes" Type="text" />
+  </EntityType>
+  <EntityType Name="AuditRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="Auditor" Type="bigint" Nullable="false" />
+    <Property Name="IsPass" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Balances">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" />
+    <Property Name="Balance" Type="float" />
+    <Property Name="FrozenAmount" Type="float" />
+    <Property Name="TotalIncome" Type="float" />
+    <Property Name="TotalOutcome" Type="float" />
+    <Property Name="ExtraAmount" Type="float" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BalanceSeriel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Balances_Id" Type="bigint" />
+    <Property Name="Order_Id" Type="bigint" />
+    <Property Name="ChargeSerielId" Type="bigint" />
+    <Property Name="DeductFee" Type="float" />
+    <Property Name="Classify" Type="int" Nullable="false" />
+    <Property Name="PayName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PaymentAccount" Type="varchar" MaxLength="100" />
+    <Property Name="PayMethod_Id" Type="bigint" />
+    <Property Name="AdditionMoney_Id" Type="bigint" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CancelOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CID" Type="bigint" />
+    <Property Name="Status" Type="int" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="StoreID" Type="bigint" />
+    <Property Name="SiteID" Type="bigint" />
+    <Property Name="CounterFee" Type="money" />
+  </EntityType>
+  <EntityType Name="CancelRule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="int" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="StoreID" Type="bigint" />
+    <Property Name="SiteID" Type="bigint" />
+    <Property Name="TimeSpanMix" Type="int" />
+    <Property Name="TimeSpanMax" Type="int" />
+    <Property Name="Electricity" Type="float" />
+  </EntityType>
+  <EntityType Name="Car_Class">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarName" Type="varchar" MaxLength="100" />
+    <Property Name="Code" Type="varchar" MaxLength="100" />
+    <Property Name="CarBrand" Type="varchar" MaxLength="100" />
+    <Property Name="EnduranceMileage" Type="varchar" MaxLength="100" />
+    <Property Name="Type" Type="varchar" MaxLength="100" />
+    <Property Name="SeatSize" Type="varchar" MaxLength="100" />
+    <Property Name="FuelType" Type="varchar" MaxLength="100" />
+    <Property Name="Battery" Type="varchar" MaxLength="100" />
+    <Property Name="CarPic" Type="varchar" MaxLength="100" />
+    <Property Name="AT_MT" Type="varchar" MaxLength="100" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="RatedPower" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumPower" Type="varchar" MaxLength="100" />
+    <Property Name="WDH" Type="varchar" MaxLength="100" />
+    <Property Name="Wheelbase" Type="varchar" MaxLength="100" />
+    <Property Name="CurbWeight" Type="varchar" MaxLength="100" />
+    <Property Name="PeopleNum" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumSpeed" Type="varchar" MaxLength="100" />
+    <Property Name="MaximumClimb" Type="varchar" MaxLength="100" />
+    <Property Name="MotorRatedSpeed" Type="varchar" MaxLength="100" />
+    <Property Name="MotorMaximumSpeed" Type="varchar" MaxLength="100" />
+    <Property Name="BodyColor" Type="varchar" MaxLength="100" />
+    <Property Name="BatteryConfig" Type="varchar" MaxLength="100" />
+    <Property Name="Motor" Type="varchar" MaxLength="100" />
+    <Property Name="ChargeMode" Type="varchar" MaxLength="100" />
+    <Property Name="ChargeForm" Type="varchar" MaxLength="100" />
+    <Property Name="ChargePower" Type="varchar" MaxLength="100" />
+    <Property Name="SwitchForm" Type="varchar" MaxLength="100" />
+    <Property Name="TransmissionForm" Type="varchar" MaxLength="100" />
+    <Property Name="Describe" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="CarDeposit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+    <Property Name="Deposit" Type="float" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CarLeasePrice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PriceOfHour" Type="money" Nullable="false" />
+    <Property Name="PriceOfDay" Type="money" Nullable="false" />
+    <Property Name="CID" Type="bigint" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="StoreID" Type="bigint" />
+    <Property Name="SiteID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="CarLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarID" Type="bigint" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="200" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="AccountID" Type="bigint" Nullable="false" />
+    <Property Name="Createtime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CarRentalUsersClassify">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="bigint" Nullable="false" />
+    <Property Name="DictionaryDetail_Id" Type="bigint" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="ShopAdminID" Type="bigint" />
+    <Property Name="Shop_Id" Type="bigint" />
+    <Property Name="CarClass_Id" Type="bigint" />
+    <Property Name="CarNum" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Classify" Type="int" />
+    <Property Name="VIN" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Cars_Reserved">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Car_Id" Type="bigint" Nullable="false" />
+    <Property Name="Appoint_stime" Type="datetime" Nullable="false" />
+    <Property Name="Appoint_etime" Type="datetime" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="CarTBoxRelationShip">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarId" Type="bigint" />
+    <Property Name="TBoxMac" Type="varchar" MaxLength="200" />
+    <Property Name="TBoxName" Type="varchar" MaxLength="200" />
+    <Property Name="TBoxNumber" Type="varchar" MaxLength="200" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="OperatorId" Type="bigint" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChargeSeriel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="AccountClass" Type="int" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="Classify" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="BuyerId" Type="varchar" MaxLength="100" />
+    <Property Name="SellerId" Type="varchar" MaxLength="100" />
+    <Property Name="OutTradeNo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TradeStatus" Type="int" Nullable="false" />
+    <Property Name="TradeNo" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompanyPersonalBinding">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Group_Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="Staff_Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="BundlingTime" Type="datetime" Nullable="false" />
+    <Property Name="UnbundlingTime" Type="datetime" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Coupon">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CouponMoney" Type="money" Nullable="false" />
+    <Property Name="MinMoney" Type="money" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Starttime" Type="datetime" Nullable="false" />
+    <Property Name="Endtime" Type="datetime" Nullable="false" />
+    <Property Name="OrderType" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="CreateAccountID" Type="bigint" Nullable="false" />
+    <Property Name="SType" Type="int" Nullable="false" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="ShopAdminID" Type="bigint" />
+    <Property Name="ShopID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="CouponAccountBind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountID" Type="bigint" Nullable="false" />
+    <Property Name="CouponID" Type="bigint" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CouponDicBind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CouponID" Type="bigint" Nullable="false" />
+    <Property Name="DicID" Type="bigint" Nullable="false" />
+    <Property Name="DicDetailID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DamageInspection">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+    <Property Name="DamageAdmin_Id" Type="bigint" />
+    <Property Name="IsDamaged" Type="int" />
+    <Property Name="BrokeComment" Type="varchar" MaxLength="100" />
+    <Property Name="CreatTime" Type="datetime" />
+    <Property Name="DeductFee" Type="float" />
+  </EntityType>
+  <EntityType Name="DamageInspectionRules">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Details" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="DayPriceRule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarClass_Id" Type="bigint" Nullable="false" />
+    <Property Name="Weekday" Type="float" Nullable="false" />
+    <Property Name="Weekend" Type="float" Nullable="false" />
+    <Property Name="Holiday" Type="float" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Deposit" Type="float" />
+  </EntityType>
+  <EntityType Name="DepositRelation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DepositName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="DepositValue" Type="float" Nullable="false" />
+    <Property Name="CarClassId" Type="bigint" />
+    <Property Name="Classify" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="OperatorId" Type="bigint" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="Note" Type="text" />
+  </EntityType>
+  <EntityType Name="DevicesRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="bigint" Nullable="false" />
+    <Property Name="DeviceNo" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="OrderId" Type="bigint" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DicountTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PrivilegeRelation_Id" Type="bigint" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="IsUsed" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Pic" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Dictionary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParentId" Type="bigint" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="200" />
+    <Property Name="FullName" Type="varchar" MaxLength="200" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="Enabled" Type="int" />
+    <Property Name="DeleteMark" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUserId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="DictionaryDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DictionaryId" Type="bigint" />
+    <Property Name="ParentId" Type="bigint" />
+    <Property Name="Code" Type="varchar" MaxLength="200" />
+    <Property Name="FullName" Type="varchar" MaxLength="200" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="Enabled" Type="int" />
+    <Property Name="DeleteMark" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateUserId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="DiscountPic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PrivilegeRelation_Id" Type="bigint" Nullable="false" />
+    <Property Name="UnValidUrl" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="ValideUrl" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoorPassword">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarId" Type="bigint" Nullable="false" />
+    <Property Name="RequestTime" Type="datetime" />
+    <Property Name="DeviceNo" Type="varchar" MaxLength="200" />
+    <Property Name="CurrentPWD" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="NextPWD" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Status" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ExtraFee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceName" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Commit" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ExtraFee_Instance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExtraFee_Id" Type="bigint" Nullable="false" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+    <Property Name="Commit" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="FaultHandlingRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleFaultInfo_Id" Type="bigint" Nullable="false" />
+    <Property Name="Operator_Id" Type="bigint" Nullable="false" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Remark" Type="text" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Content" Type="text" Nullable="false" />
+    <Property Name="AccountId" Type="bigint" Nullable="false" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="IsRead" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FestivalDates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="SolarDate" Type="varchar" MaxLength="100" />
+    <Property Name="TotalDays" Type="int" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="LunarDate" Type="varchar" MaxLength="100" />
+    <Property Name="DaysOf" Type="int" />
+  </EntityType>
+  <EntityType Name="Franchisees">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Contact" Type="varchar" MaxLength="100" />
+    <Property Name="Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Logo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GroupAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Contacts" Type="varchar" MaxLength="100" />
+    <Property Name="Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GroupBalance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupAccount_Id" Type="bigint" Nullable="false" />
+    <Property Name="AmountOfMoney" Type="float" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GroupBalanceFlow">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Group_Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="AmountOfMoney" Type="float" Nullable="false" />
+    <Property Name="OrderId" Type="bigint" />
+    <Property Name="Classify" Type="int" Nullable="false" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="Remark" Type="text" />
+  </EntityType>
+  <EntityType Name="InsuranceSeriel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="bigint" />
+    <Property Name="OrderId" Type="bigint" Nullable="false" />
+    <Property Name="BalanceSerielId" Type="bigint" />
+    <Property Name="Deposit" Type="float" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="InvoiceTemplate_Id" Type="bigint" Nullable="false" />
+    <Property Name="Money" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvoiceTemplate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="Tel" Type="varchar" MaxLength="100" />
+    <Property Name="Receiver" Type="varchar" MaxLength="100" />
+    <Property Name="DeliveryAddrs" Type="varchar" MaxLength="100" />
+    <Property Name="InvoiceTitle" Type="varchar" MaxLength="100" />
+    <Property Name="InvoiceContent" Type="nchar" MaxLength="200" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParentId" Type="bigint" Nullable="false" />
+    <Property Name="MenuName" Type="varchar" MaxLength="100" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="MenuRights">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Classify" Type="int" />
+    <Property Name="Menu_Id" Type="bigint" />
+  </EntityType>
+  <EntityType Name="MoneyProportion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FranchiseeID" Type="bigint" Nullable="false" />
+    <Property Name="Proportion" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Createtime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Shop_Id" Type="bigint" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="CarClass_Id" Type="bigint" />
+    <Property Name="Car_Id" Type="bigint" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="PickupShop_Id" Type="bigint" Nullable="false" />
+    <Property Name="ReturnShop_Id" Type="bigint" Nullable="false" />
+    <Property Name="OrderDeposit" Type="float" />
+    <Property Name="OrderStatus" Type="int" />
+    <Property Name="PayStatus" Type="int" />
+    <Property Name="IsPrinted" Type="int" />
+    <Property Name="PayWay" Type="int" />
+    <Property Name="E_Signature" Type="varchar" MaxLength="100" />
+    <Property Name="OrderNum" Type="varchar" MaxLength="100" />
+    <Property Name="OrderMoney" Type="float" />
+    <Property Name="BudgetCost" Type="float" />
+    <Property Name="OrderCategory" Type="int" />
+    <Property Name="Coupon_Id" Type="bigint" />
+  </EntityType>
+  <EntityType Name="OrderChange">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="bigint" Nullable="false" />
+    <Property Name="OperatorId" Type="bigint" Nullable="false" />
+    <Property Name="OriginalState" Type="int" />
+    <Property Name="Remark" Type="varchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="bigint" />
+    <Property Name="Classify" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatTime" Type="datetime" />
+    <Property Name="SendTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Partners">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PayMethod">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PayName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="PeccancyDeposit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+    <Property Name="Deposit" Type="float" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PeccancyInspection">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+    <Property Name="BreakRuleAdmin_Id" Type="bigint" />
+    <Property Name="IsBreakRule" Type="int" />
+    <Property Name="PeccancyComment" Type="varchar" MaxLength="100" />
+    <Property Name="CreatTime" Type="datetime" />
+    <Property Name="DeductFee" Type="float" />
+  </EntityType>
+  <EntityType Name="PersonalDepositUsage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="bigint" Nullable="false" />
+    <Property Name="RequiredDepost" Type="int" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pickup_Return">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+    <Property Name="ActualPickTime" Type="datetime" />
+    <Property Name="PickupShop_Id" Type="bigint" />
+    <Property Name="InitialBatVal" Type="float" />
+    <Property Name="PickAdmin_Id" Type="bigint" />
+    <Property Name="ReturnShop_Id" Type="bigint" />
+    <Property Name="RemainBatVal" Type="float" />
+    <Property Name="ActualReturnTime" Type="datetime" />
+    <Property Name="ReturnAdmin_Id" Type="bigint" />
+  </EntityType>
+  <EntityType Name="PostageInvoiceRelationship">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceTemplate_Id" Type="bigint" />
+    <Property Name="ChargeSeriel_Id" Type="bigint" />
+    <Property Name="TradeStatus" Type="int" Nullable="false" />
+    <Property Name="PayWay" Type="int" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Privilege">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LevelName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Describe" Type="varchar" MaxLength="100" />
+    <Property Name="Way" Type="int" Nullable="false" />
+    <Property Name="ProportionMax" Type="float" />
+    <Property Name="Classify" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrivilegeRelation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Acc_ClassifyID" Type="bigint" Nullable="false" />
+    <Property Name="Privilege_Id" Type="bigint" Nullable="false" />
+    <Property Name="Money" Type="float" />
+    <Property Name="Proportion" Type="float" Nullable="false" />
+    <Property Name="STime" Type="datetime" Nullable="false" />
+    <Property Name="ETime" Type="datetime" />
+    <Property Name="OperatorID" Type="bigint" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PromotionPic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CreatTime" Type="datetime" />
+    <Property Name="Remark" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Provinces">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="areaname" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="parentno" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="areacode" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="arealevel" Type="int" Nullable="false" />
+    <Property Name="typename" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="RechargeRecord">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountID" Type="bigint" Nullable="false" />
+    <Property Name="AdditionMoneyID" Type="bigint" Nullable="false" />
+    <Property Name="PayMoney" Type="money" Nullable="false" />
+    <Property Name="GetMoney" Type="money" Nullable="false" />
+    <Property Name="SurplusMoney" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistTextMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" />
+    <Property Name="Veri_Code" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="RequestTime" Type="datetime" />
+    <Property Name="Tel" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="DeviceNo" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="RentCarPackage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="200" />
+    <Property Name="Starttime" Type="time" />
+    <Property Name="Endtime" Type="time" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Createtime" Type="datetime" Nullable="false" />
+    <Property Name="CreateAccountID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RentCarShopBind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RentCarID" Type="bigint" Nullable="false" />
+    <Property Name="ShopID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReturnCar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CID" Type="bigint" />
+    <Property Name="Status" Type="int" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="StoreID" Type="bigint" />
+    <Property Name="SiteID" Type="bigint" />
+    <Property Name="CounterFee" Type="money" />
+    <Property Name="FeeTimeNode" Type="int" />
+    <Property Name="Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SecurityDeposit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="Deposit" Type="float" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SecurityDepositSeriel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SecurityDeposit_Id" Type="bigint" Nullable="false" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="Classify" Type="int" Nullable="false" />
+    <Property Name="OperatorId" Type="bigint" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="Remark" Type="text" />
+  </EntityType>
+  <EntityType Name="Shop_Manage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountID" Type="bigint" Nullable="false" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="ShopAdminID" Type="bigint" />
+    <Property Name="ShopID" Type="bigint" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Stime" Type="datetime" />
+    <Property Name="Etime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ShopAdmin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Contact" Type="varchar" MaxLength="50" />
+    <Property Name="Tel" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="bigint" />
+    <Property Name="FranchiseeID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ShopRentPrice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Shop_Id" Type="bigint" Nullable="false" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Comment" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Shops">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Tel" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Country" Type="bigint" />
+    <Property Name="Contact" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Longitude" Type="decimal" Precision="13" Scale="10" />
+    <Property Name="Latitude" Type="decimal" Precision="13" Scale="10" />
+    <Property Name="Status" Type="int" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="ShopAdminID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SMSTextMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="Veri_Code" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RequestTime" Type="datetime" />
+    <Property Name="Tel" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="DeviceNo" Type="varchar" MaxLength="50" />
+    <Property Name="LoginCount" Type="int" />
+  </EntityType>
+  <EntityType Name="SpecialVehicleUsage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="bigint" Nullable="false" />
+    <Property Name="AmountOfMoney" Type="float" />
+    <Property Name="PartnerId" Type="bigint" Nullable="false" />
+    <Property Name="ConsumptionNo" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PaymentMethod" Type="int" />
+    <Property Name="PaymentStatus" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="PaymentTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SystemMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="Content" Type="text" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBoxPassword">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TBoxMAC" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="TemporaryPWD" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TextMsg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Order_Id" Type="bigint" Nullable="false" />
+    <Property Name="Veri_Code" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RequestTime" Type="datetime" />
+    <Property Name="Tel" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TimeGradientPrice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStep" Type="float" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TimeOutOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CID" Type="bigint" />
+    <Property Name="FranchiseeID" Type="bigint" />
+    <Property Name="StoreID" Type="bigint" />
+    <Property Name="SiteID" Type="bigint" />
+    <Property Name="BreachFee" Type="float" />
+    <Property Name="FeeTimeNode" Type="int" />
+  </EntityType>
+  <EntityType Name="UnitTimePriceRule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarClass_Id" Type="bigint" Nullable="false" />
+    <Property Name="Weekday" Type="float" Nullable="false" />
+    <Property Name="Weekend" Type="float" Nullable="false" />
+    <Property Name="Holiday" Type="float" Nullable="false" />
+    <Property Name="Overtime" Type="float" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Deposit" Type="float" />
+  </EntityType>
+  <EntityType Name="UsefulCarRemind">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="bigint" Nullable="false" />
+    <Property Name="ShopId" Type="bigint" Nullable="false" />
+    <Property Name="SetTime" Type="datetime" Nullable="false" />
+    <Property Name="AvailableTime" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="Tel" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Avatar" Type="varchar" MaxLength="100" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="int" />
+    <Property Name="ID_CardNum" Type="varchar" MaxLength="100" />
+    <Property Name="ID_CardPic" Type="varchar" MaxLength="100" />
+    <Property Name="Driver_License" Type="varchar" MaxLength="100" />
+    <Property Name="InviteCode" Type="varchar" MaxLength="100" />
+    <Property Name="ID_CardFront" Type="varchar" MaxLength="100" />
+    <Property Name="Driver_LicenseDate" Type="datetime" />
+    <Property Name="IDPicStatus" Type="int" />
+    <Property Name="DriverPicStatus" Type="int" />
+    <Property Name="HandheldCreditCard" Type="varchar" MaxLength="100" />
+    <Property Name="CreditCard" Type="varchar" MaxLength="100" />
+    <Property Name="CreditCardStatus" Type="int" />
+    <Property Name="PortraitPic" Type="varchar" MaxLength="200" />
+    <Property Name="PortraitStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="UserDeposit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="bigint" Nullable="false" />
+    <Property Name="Deposit" Type="float" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="ExpirationDate" Type="datetime" />
+    <Property Name="UnusableDay" Type="int" Nullable="false" />
+    <Property Name="IdentityAuth" Type="int" />
+    <Property Name="ZmopAuth" Type="int" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="UserDepositSeriels">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserDeposit_Id" Type="bigint" Nullable="false" />
+    <Property Name="Order_Id" Type="bigint" />
+    <Property Name="DeducFee" Type="float" />
+    <Property Name="ChargeSerielId" Type="bigint" />
+    <Property Name="Classify" Type="int" Nullable="false" />
+    <Property Name="PayName" Type="varchar" MaxLength="100" />
+    <Property Name="PayMentAccount" Type="varchar" MaxLength="100" />
+    <Property Name="PayMethod" Type="bigint" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="Remark" Type="text" />
+  </EntityType>
+  <EntityType Name="UserZMXY">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountId" Type="bigint" Nullable="false" />
+    <Property Name="Open_Id" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Score" Type="int" />
+    <Property Name="Transaction_Id" Type="varchar" MaxLength="200" />
+    <Property Name="QueryTimes" Type="int" />
+    <Property Name="UpdateTime" Type="datetime" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VehicleFaultInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarNumber" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Rank" Type="int" />
+    <Property Name="FaultName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="Longitude" Type="decimal" Precision="13" Scale="10" />
+    <Property Name="Latitude" Type="decimal" Precision="13" Scale="10" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Remark_1" Type="text" />
+    <Property Name="Remark_2" Type="text" />
+    <Property Name="Remark_3" Type="text" />
+  </EntityType>
+  <EntityType Name="VehicleVerificationCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarId" Type="bigint" Nullable="false" />
+    <Property Name="OrderId" Type="bigint" />
+    <Property Name="PartnerId" Type="bigint" />
+    <Property Name="DigitalCode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RequestTime" Type="datetime" />
+    <Property Name="DeviceNo" Type="varchar" MaxLength="50" />
+    <Property Name="AvailableTime" Type="float" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“TimeRentYT.dbo.Personal_Order”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Personal_Order">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="PickupShopName" />
+      <PropertyRef Name="PickupShopAddress" />
+      <PropertyRef Name="PickupShopCity" />
+      <PropertyRef Name="ReturnShopName" />
+      <PropertyRef Name="ReturnShopAddress" />
+      <PropertyRef Name="ReturnShopCity" />
+      <PropertyRef Name="StartTime" />
+      <PropertyRef Name="EndTime" />
+      <PropertyRef Name="CreatTime" />
+      <PropertyRef Name="Account_Id" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="PickupShopName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PickupShopAddress" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PickupShopCity" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ReturnShopName" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ReturnShopAddress" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ReturnShopCity" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CarName" Type="varchar" MaxLength="100" />
+    <Property Name="OrderNum" Type="varchar" MaxLength="100" />
+    <Property Name="OrderStatus" Type="int" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="CreatTime" Type="datetime" Nullable="false" />
+    <Property Name="OrderMoney" Type="float" />
+    <Property Name="BudgetCost" Type="float" />
+    <Property Name="OrderDeposit" Type="float" />
+    <Property Name="Account_Id" Type="bigint" Nullable="false" />
+    <Property Name="CarPic" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Expr2" Type="float" />
+    <Property Name="PayStatus" Type="int" />
+    <Property Name="Balance" Type="float" />
+    <Property Name="PayWay" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“TimeRentYT.dbo.Shop_Car_View”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="Shop_Car_View">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Appoint_stime" />
+      <PropertyRef Name="Car_Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CarName" Type="varchar" MaxLength="100" />
+    <Property Name="CarClass_Id" Type="bigint" />
+    <Property Name="Appoint_stime" Type="datetime" Nullable="false" />
+    <Property Name="Appoint_etime" Type="datetime" />
+    <Property Name="Car_Id" Type="bigint" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="100" />
+  </EntityType>
+</Schema>

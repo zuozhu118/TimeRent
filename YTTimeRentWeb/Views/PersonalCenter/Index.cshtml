@@ -1,0 +1,311 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    string COUNT = Session["ORDERCOUNT"].ToString();//订单总数
+    string MONEY = Session["MONEY"].ToString();//账户余额；
+    
+}
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href="~/Content/PersonalCenter/PersonalCenterStyle.css" rel="stylesheet" />
+<link href="~/Content/PersonalCenter/NavPager.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.12.0.min.js"></script>
+<script src="~/Scripts/PersonalCenterIndex.js"></script>
+<script src="~/Content/js/jquery-ui.js"></script>
+<script src="~/jquery-form.js"></script>
+<div style="border-bottom: 1px solid #e2e2e2;margin-bottom:20px;">
+    <div class="head-table">
+        <ul>
+            <li class="head-li1"><span>我的新能源</span></li>
+            <li class="head-li2">
+                <ul>
+                   @* <li><strong>0</strong><br />
+                        <span>会员积分</span> </li>*@
+                    <li><strong id="coupon">0</strong><br />
+                        <span>优惠劵</span> </li>
+                    <li><strong id="Cards">@MONEY</strong><br />
+                        <span>账户余额</span> </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="contain">
+    <div class="contain-left">
+        <ul>
+            <li>
+                <p style="border-top: 0px;">我的订单</p>
+            </li>
+            
+            
+            <li style="display:none;"><a href="#">账户余额</a>（<span id="blancecount">@MONEY</span>）</li>  
+            <li style="display:none;"><span id="Timespan">@DateTime.Now.ToString("yyyy-M-dd")</span></li>  
+            
+            <li style="background-color:#c0ff80;"><a href="#" onclick="OrdersRealod()">租车订单</a>（<span id="countspan">@COUNT</span>）</li>
+           @* <li><a href="#">购车订单</a>（0）</li>*@
+            <li>
+                <p>我的账户</p>
+            </li>
+            <li><a href="#" onclick="BCountClick()">账户余额</a></li>
+           @* <li><a href="#" onclick="CARDSClick()">储值卡</a></li>*@
+            <li><a href="#" onclick="CouponClick()">优惠劵</a></li>
+            <li>
+                <p>信息认证</p>
+            </li>
+            <li><a href="#" onclick="UserAuthenticate()">用户认证</a></li>
+           @* <li><a href="#">芝麻信用认证</a></li>*@
+        </ul>
+    </div>
+    <div class="contain-big-ritht">
+        <div class="contain-right">
+            <div class="rentorder" id="rentorder">
+                <span id="Rentorder" class="order-span">租车订单</span>
+                <div class="order">
+                    <input type="text"  id="pickday" class="rentday" value="@DateTime.Now.ToString("yyyy-M-dd")" />
+                </div>
+
+                <div class="order">
+                    <input type="text"  id="returnday" class="rentday" value="@DateTime.Now.ToString("yyyy-M-dd")" />
+
+                </div>   
+                <input type="button" name="name" value="查询" onclick="SelectOrder()" />
+            </div>
+                
+            <div id="OrderState" class="orderstates">
+                <div class="Order-Name" style="margin:0 auto;display:table;">
+                    <ul class="table-row">
+                        <li style="color:#effae7;background-color:#74C621"><a href="javascript::"  onclick="Orders(0)" style="color:#fff;">全部订单</a></li> @*style="color:#effae7;background-color:#74C621"*@
+                        <li ><a href="javascript::" onclick="Orders(1)">进行中</a></li>
+                        <li ><a href="javascript::" onclick="Orders(2)">已完成</a></li>
+                        <li><a href="javascript::" onclick="Orders(3)">已取消</a></li>
+                        <li><a href="javascript::" onclick="Orders(4)">预订单</a></li>
+                    </ul>
+                </div>
+                <div class="table-row-group" id="orderdiv">
+                    <table border="0" class="order-table" >
+                        <thead>
+                            <tr>
+                                <th>订单信息</th>
+                                <th style="width: 200px;">取/还车信息</th>
+                                <th style="width: 120px;">总计</th>
+                                <th>订单状态</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyID">
+                            @foreach (var item in Model.Personallist)
+                            {
+                                <tr>
+                                    <td class="ordernum">
+                                        <p class="orderone">@item.CarName</p>
+                                        <p class="orderone">订单号：<span>@item.OrderNum</span></p>
+                                    </td>
+                                    <td class='msgtd'>
+                                        <div>
+                                            <p class="adress">
+                                                <img src="~/Images/web3_03.png" />
+                                               @* <span>@item.PICCity</span>-<span>@item.PicAddress</span><br />*@
+                                                <span>@item.PicAddress</span>
+                                                <span class="timespan">@item.StartTime</span>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="adress">
+                                                <img src="~/Images/web3_06.png" />
+                                                @*<span >@item.RETCity</span>-<span>@item.RetAddress</span><br />*@
+                                                <span>@item.RetAddress</span><br />
+                                                <span class="timespan">@item.EndTime</span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td  class="totalprice-td">￥@(Convert.ToDouble(item.BudgetCost))
+                                    </td>
+                                    <td>
+                                        <span>@item.OrderStatus</span><br />
+                                        <a href="/PersonalCenter/PersonalDetial?ordernum=@item.OrderNum" target="_blank" class='detiallink'>详情</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div id="LinkdivID" class="paginator">
+                        @Html.Raw(Model.Pagerlink)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot" id="footdiv">
+            <p class="p1">注意事项</p>
+            <p>1.修改或取消订单，请您致电400 000 000申请，送车上门或服务点订单请至少在我们的工作时间内（08:00-20:00）提前2小时修改；</p>
+            <p>2.预付订单，逾时不履行或取消的，退还您预付款中的基本保险、手续费及可以选服务费款项，已付费用将作为违约金恕不退还；</p>
+            <p>3.系统将为您保留一年之内的订单，如需查询更早的订单，请致电24小时热线。</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    DatePicker();
+    function DatePicker() {
+        $(".rentday").datepicker({
+            dateFormat: 'yy-m-dd',
+            numberOfMonths: 1,//显示几个月  
+            clearText: "清除",//清除日期的按钮名称  
+            closeText: "关闭",//关闭选择框的按钮名称  
+            yearSuffix: '年', //年的后缀  
+            monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            dayNames: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+            dayNamesShort: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+            dayNamesMin: ['日', '一', '二', '三', '四', '五', '六']
+        });
+    }
+</script>
+
+@*<script type="text/javascript">
+//==========================================修改个人中心用户名，密码信息=============================
+    function vipmanage() {
+        $('#rightdivID').html("");
+        $('#rightdivID').html("<ul><li>会员管理</li><li><a  onclick='vipmanage()'>个人信息</a></li><li><a  onclick='modifypword()'>修改密码</a></li></ul>");
+        $('#rightdivID').append("<div id='msgdiv'>姓名 <input type=text id='nameID'/><br/>身份证 <input type=text id='cardID'/><br/>驾龄 <input type=text id='driverID'/><br/>手机号 <input type=text id='phID'/><br/>邮箱 <input type=text id='emailID'/><br/><input type=button value='保存' disabled='disabled' onclick='savetext()'/>  <input type=button value='修改' onclick='modifytext()'/></div>");
+        $('#msgdiv input[type=text]').attr("disabled", true);
+        $.post("/PersonalCenter/VipManage", {}, function (data) {
+            $('#nameID').val(data.Name);
+            $('#cardID').val(data.ID_CardNum);
+            $('#driverID').val(data.Driver_Experience);
+            $('#phID').val(data.Tel);
+            $('#emailID').val(data.Email);
+        });
+    }
+    function modifytext() {
+        $('#msgdiv input').attr("disabled", false);
+    }
+    function savetext() {
+        var Name = $('#nameID').val();
+        var Card = $('#cardID').val();
+        var Driver = $('#driverID').val();
+        var Ph = $('#phID').val();
+        var Email = $('#emailID').val();
+        $.post("/PersonalCenter/VipModify", { name: Name, card: Card, driver: Driver, ph: Ph, email: Email }, function (data) {
+            if (data == true) {
+                //window.location.href=
+                alert("修改成功！");
+            }
+            else {
+                alert("修改失败");
+            }
+        });
+    }
+    var state;
+    var OldPwdstate;
+    var Inputpassword;//表示用户输入新密码是否成功的状态：true或者false;
+    var Password;//表示用户确认输入的密码是否正确的状态；
+    function modifypword() {
+        $('#msgdiv').html("<div id='Mpwdiv'>旧密码 <input type='password' id='oldpw'/><span id='oldspID'></span><br/>新密码 <input type='password' id='newpw'/><span id='newspID' ></span><br/>确认密码 <input type='password' id='conpwd'/><span id='conspID'></span><br/><input type=button value='确认修改' onclick='ModifyedPwd()'/></div>");
+        //判断用户旧密码和新密码输入的格式是否正确：
+        OldpwdMethod($('#oldpw'), $('#oldspID'));
+        JudgePassword($('#newpw'), $('#newspID'));
+        PasswordConform();
+    }
+
+    function OldpwdMethod(userinput, spanhtml) {//userinput表示文本框对象，例如用户名或者密码框对象；spanhtml表示文本框后面的span对象；
+        userinput.focusin(function () {
+            spanhtml.html('<img src="/Images/2.png" /> 6-16字符');
+            userinput.css('border', '1px solid red');
+            OldPwdstate = 2;
+        });
+        userinput.focusout(function () {
+            var usernametext = userinput.val();
+            usernametext = usernametext.replace(/\s+/g, "");//去掉所有的空格；
+
+            if (usernametext.length == 0) {
+                spanhtml.html('<img src="/Images/1.png" />  请输入密码');
+            }
+            else if (usernametext.length < 6) {
+                spanhtml.html('<img src="/Images/5.png" /> 至少6个字符');
+            }
+            else if (usernametext.length > 16) {
+                spanhtml.html('<img src="/Images/5.png" /> 最多16个字符');
+            }
+            else {
+                //spanhtml.html('<img src="/Images/6.png" />');
+                spanhtml.html("");
+                userinput.css('border', '1px solid green');
+                OldPwdstate = 1;
+            }
+        });
+    }
+    function JudgePassword(userinput, spanhtml) {//userinput表示文本框对象，例如用户名或者密码框对象；spanhtml表示文本框后面的span对象；
+        userinput.focusin(function () {
+            spanhtml.html('<img src="/Images/2.png" /> 6-16字符');
+            userinput.css('border', '1px solid red');
+            Inputpassword = 2;
+        });
+        userinput.focusout(function () {
+            var usernametext = userinput.val();
+            usernametext = usernametext.replace(/\s+/g, "");//去掉所有的空格；
+
+            if (usernametext.length == 0) {
+                spanhtml.html('<img src="/Images/1.png" />  请输入密码');
+            }
+            else if (usernametext.length < 6) {
+                spanhtml.html('<img src="/Images/5.png" /> 至少6个字符');
+            }
+            else if (usernametext.length > 16) {
+                spanhtml.html('<img src="/Images/5.png" /> 最多16个字符');
+            }
+            else {
+                //spanhtml.html('<img src="/Images/6.png" />');
+                spanhtml.html("");
+                userinput.css('border', '1px solid green');
+                Inputpassword = 1;
+            }
+        });
+    }
+    function PasswordConform() {
+        $('#conpwd').focusin(function () {
+            $('#conpwd').css('border', '1px solid red');
+            Password = 2;
+        });
+        $('#conpwd').focusout(function () {
+            if ($('#conpwd').val().length == 0) {
+                $('#conspID').html('<img src="/Images/1.png" />  请再次输入密码');
+            }
+            else {
+                if ($('#newpw').val() == $('#conpwd').val()) {
+                    //$('#conspID').html('<img src="/Images/6.png" />');
+                    $('#conpwd').css('border', '1px solid green');
+                    $('#conspID').html("");
+                    Password = 1;
+                }
+                else {
+                    $('#conspID').html('<img src="/Images/1.png" /> 两次输入密码不同，请重新输入');
+                    $('#conpwd').css('border', '1px solid red');
+                }
+            }
+        });
+
+    }
+
+    function ModifyedPwd() {
+        //alert(OldPwdstate + ',     ' + Inputpassword + ',     ' + Password + ',     ' + state);
+        if (OldPwdstate == 1 && Inputpassword == 1 && Password == 1) {
+            var OldPwd = $('#oldpw').val();
+            $.post("/PersonalCenter/ValidateOldPwd", { oldpwd: OldPwd }, function (data) {
+                if (data == true) {
+                    //alert('旧密码输入正确');
+                    var NewPwd = $('#newpw').val();
+                    $.post("/PersonalCenter/ModifyPWD", { newpwd: NewPwd }, function (data) {
+                        if (data) {
+                            alert("密码修改成功");
+                        }
+                        else {
+                            alert('密码修改失败');
+                        }
+                    });
+                }
+                else {
+                    alert('旧密码输入错误---');
+                }
+            });
+        }
+    }
+</script>    *@

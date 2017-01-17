@@ -1,0 +1,155 @@
+﻿@{
+    //ViewBag.Title = "Index";
+    
+}
+
+
+<link rel="stylesheet" type="text/css" href="/content/rent/rent.css">
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+@*<link href="~/EasyUI/themes/default/easyui.css" rel="stylesheet" />
+<link href="~/EasyUI/themes/icon.css" rel="stylesheet" />*@
+<script src="~/Scripts/jquery-1.12.0.min.js"></script>
+<script src="~/Content/js/jquery-ui.js"></script>
+@*<script src="~/EasyUI/jquery.easyui.min.js"></script>*@
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5cqW9gRejdYjxQkfkyuwEqyq"></script>
+
+<script src="~/Scripts/YTTimeRentIndex.js"></script>
+
+@* <div id="dd" data-options="iconCls:'icon-save'" style="padding:5px;width:200px;height:200px;">	
+ </div>*@
+<form name="form1">
+    <article>
+        <div id="SelareaID">
+            <div class="selcls">
+                <span class="span1">选择区域：</span>
+
+@*
+                省市区三级联动----------------
+                <select class="select-city" id="PrinceID" name="ProvinceName" onchange="SelectCity(form1.ProvinceName,form1.CityName)">
+                    @foreach (var item in Model)
+                    {
+                        if (item.PName == "江西省")
+                        {
+                        <option selected="selected"  value="@item.PId">@item.PName </option>
+                        }
+                        else
+                        {
+                        <option  value="@item.PId">@item.PName</option>
+                        }
+                    }
+
+                </select>
+
+                <select class="selectarea" id="CityID" name="CityName" onchange="SelectCountry(this,form1.CountrySelectName)">
+                </select>
+
+                <select name="CountrySelectName" id="ShopId" class="selectarea" onchange="SelectShops(this,form1.PikShopName)">
+                </select>*@
+
+
+               @* 取消区----2016-12-05---------------------*@
+                 <select class="select-city" id="PrinceID" name="ProvinceName" onchange="ProvinceChange(this,form1.CityName)">
+                    @foreach (var item in Model)
+                    {
+                        if (item.PName == "江西省")
+                        {
+                        <option selected="selected"  value="@item.PId">@item.PName </option>
+                        }
+                        else
+                        {
+                        <option  value="@item.PId">@item.PName</option>
+                        }
+                    }
+
+                </select>
+                <select name="CityName" id="CityID" onchange="CityChange(this,form1.PikShopName)">
+                </select>
+
+                <div class="shopimg">
+                    <input type="text" id="shopinput" name="name" placeholder="输入租车门店名称" />
+                    <img src="~/Images/search_03.png" onclick="SelectIMG(form1.CityName,form1.PikShopName)" />
+                </div>
+                <span style="position: relative; margin-left: 70px;">租车门店数量</span><span id="shopcountID" style="font-size: 20px; color: #74c621; position: relative; left: 10px;"></span>
+
+            </div>
+        </div>
+        <p class="shopMAP">租车门店地图</p>
+        <div id="Mapdiv" style="border: 1px solid #b9b9b9; height: 422px; width: 930px; margin: 0 auto;">
+        </div>
+        <p class="card-top">
+            填写行程
+        </p>
+        <div class="card-body">
+            <div class="card-left" style="width: 930px;">
+                <table border="0" class="tabone">
+                    <tr>
+                        <td class="td-shop">
+                            <ul class="table-row">
+                                <li class="carspan"><span>取车</span></li>
+                                <li class="li2">
+                                    <select id="PicShopID" name="PikShopName" class="shopselect" onchange="ShopChanged()">
+                                    </select></li>
+                            </ul>
+                        </td>
+                        <td class="td-cartime">
+                            <ul class="table-row">
+                                <li class="timespan"><span>取车时间</span></li>
+                                <li class="li4">
+                                    <input type="text"  id="pickday" class="rentday" readonly="true" name="getcartimetext" style="background-color:white;"/></li>
+                                
+                                <li class="li6">
+                                 
+                                    <select id="pickhour" name="sel" class="timeselect" onchange="SReturnTime()">
+                                    </select></li>
+                            </ul>
+                        </td>
+                        <td class="td-table">
+                            <span style="font-size: 16px; padding-left: 10px;">租车时长：</span><span id="RentTimeCountID" style="font-size: 16px; color: #74c621; padding-left: 0px;"></span>
+                        </td>
+                    </tr>
+                    <tr class="tr2">
+                        <td class="td-shop" id="tdbottom1">
+                            <ul class="table-row">
+                                <li class="carspan"><span>还车</span></li>
+                                <li class="li2">
+                                    <select id="RetShopID" name="RetShopName" class="shopselect" onchange="ShopChanged()"></select></li>
+                            </ul>
+                        </td>
+                        <td class="td-cartime" id="tdbottom2">
+                            <ul class="table-row">
+                                <li class="timespan"><span>还车时间</span></li>
+                                <li class="li4">
+                                    <input type="text"  id="returnday" class="rentday" readonly="true"  /></li>@* onchange="RentDateChange()" *@
+                                <li class="li6">
+                                    <select id="returnhour" name="sel2" class="timeselect" onchange="RetTimeChagne()">
+                                    </select></li>
+                            </ul>
+                        </td>
+                        <td id="tdbottom3">
+                            <input type="button" id="selectcarbtn" name="name" class="xuanche" value="立即租车" onclick="RentCarBtns()" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="CarMsgdiv" class="CarMsgdiv" style="width: 930px; margin: 0 auto;">
+            </div>
+        </div>
+    </article>
+</form>
+<div class="motel"></div>
+<div class="AlertDia">
+    <h3>预约提示</h3>
+    <p>
+        因预约订单取车时可能出现电量不足的情况：<br />
+        预约使用时间为2~4小时，电量不足60%时可免费取消；<br />
+        预约使用时间4小时以上，电量不足80%可免费取消；
+    </p>
+    <p>
+        <input type="button" name="name" value="确认用车" onclick="SureRent()" />
+        <input type="button" name="name" value="取消" onclick="Cancle()" />
+
+    </p>
+</div>
+
+   

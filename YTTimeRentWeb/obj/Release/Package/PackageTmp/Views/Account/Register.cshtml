@@ -1,0 +1,319 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="/content/rent/master.css">
+<link rel="stylesheet" type="text/css" href="/content/Account/register.css">
+<script src="~/Scripts/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+    //声明变量,作为用户表单内容填写是否正确的状态；
+    var Inputpassword;
+    var Password;
+    var PHONE;
+    var Verification;
+    $(function () {
+        //JudgeInput($('#username'), $('#textname'));
+        JudgePassword($('#password'), $('#textpass'));
+        PasswordConform();
+        JudgePhone();
+        //Judgeverification();
+    });
+    //function JudgeInput(userinput, spanhtml) {//userinput表示文本框对象，例如用户名或者密码框对象；spanhtml表示文本框后面的span对象；
+    //    userinput.focusin(function () {
+    //        spanhtml.html('<img src="/Images/2.png" /> 4-16字符,必须以英文字母开始');
+    //        userinput.css('border', '1px solid red');
+    //        Inputtext = 2;
+    //    });
+    //    userinput.focusout(function () {
+    //        var usernametext = userinput.val();
+    //        //创建一个正则表达式验证用户名：
+    //        var regex = /^[a-zA-Z][0-9A-Za-z]{3,15}$/;
+    //        //验证是否以字母开头：
+    //        var zimu = /^[^a-zA-Z]/;
+    //        var Istrue = regex.test(usernametext);
+    //        var Iszimu = zimu.test(usernametext);
+    //        if (usernametext.length == 0) {
+    //            spanhtml.html('<img src="/Images/1.png" />  请输入用户名');
+    //        }
+    //        else if (usernametext.length < 4) {
+    //            spanhtml.html('<img src="/Images/5.png" /> 至少4个字符');
+    //        }
+    //        else if (usernametext.length > 16) {
+    //            spanhtml.html('<img src="/Images/5.png" /> 最多16个字符');
+    //        }
+    //        else {//当用户输入的字符长度在4-16之间时；
+    //            if (Istrue == false) {
+    //                if (Iszimu == true) {
+    //                    spanhtml.html('<img src="/Images/5.png" /> 必须以字母开头');
+    //                }
+    //                else {
+    //                    spanhtml.html('<img src="/Images/5.png" /> 只能输入字母和数字');
+    //                }
+    //            }
+
+    //            else {//用户输入的长度正确，正则表达式验证也正确；
+    //                //将用户在用户名中文本框中输入的值传递到后台进行判断是否在数据库中已注册：
+    //                $.post("/Account/UsernameExist", { username: usernametext }, function (data) {
+    //                    if (data==true) {
+    //                        spanhtml.html('<img src="/Images/6.png" />');
+    //                        userinput.css('border', '1px solid green');
+    //                        //return true;
+    //                        Inputtext = 1;
+    //                    }
+    //                    else {
+    //                        spanhtml.html('<img src="/Images/5.png" /> 该用户名已注册');
+    //                        //alert(data);
+    //                    }
+    //                });
+
+    //            }
+    //        }
+    //    });
+    //}
+    function JudgePassword(userinput, spanhtml) {//userinput表示文本框对象，例如用户名或者密码框对象；spanhtml表示文本框后面的span对象；
+        userinput.focusin(function () {
+            spanhtml.html('<img src="/Images/2.png" /> 6-16字符');
+            userinput.css('border', '1px solid red');
+            Inputpassword = 2;
+        });
+        userinput.focusout(function () {
+            var usernametext = userinput.val();
+            usernametext = usernametext.replace(/\s+/g, "");//去掉所有的空格；
+            //创建一个正则表达式验证用户名：
+            var regex = /^[a-zA-Z][0-9A-Za-z]{5,15}$/;
+            var Istrue = regex.test(usernametext);
+            if (usernametext.length == 0) {
+                spanhtml.html('<img src="/Images/1.png" />  请输入密码');
+            }
+            else if (usernametext.length < 6) {
+                spanhtml.html('<img src="/Images/5.png" /> 至少6个字符');
+            }
+            else if (usernametext.length > 16) {
+                spanhtml.html('<img src="/Images/5.png" /> 最多16个字符');
+            }
+            else {
+
+                spanhtml.html('<img src="/Images/6.png" />');
+                userinput.css('border', '1px solid green');
+                Inputpassword = 1;
+            }
+        });
+    }
+    function PasswordConform() {
+        $('#confirmpassword').focusin(function () {
+            $('#confirmpassword').css('border', '1px solid red');
+            Password = 2;
+        });
+        $('#confirmpassword').focusout(function () {
+            if ($('#confirmpassword').val().length == 0) {
+                $('#textcpass').html('<img src="/Images/1.png" />  请再次输入密码');
+            }
+            else {
+                if ($('#confirmpassword').val() == $('#password').val()) {
+                    $('#textcpass').html('<img src="/Images/6.png" />');
+                    $('#confirmpassword').css('border', '1px solid green');
+                    //return true;
+                    Password = 1;
+                }
+                else {
+                    $('#textcpass').html('<img src="/Images/1.png" /> 输入错误');
+                    $('#confirmpassword').css('border', '1px solid red');
+                }
+            }
+        });
+
+    }
+    function JudgePhone() {
+        $('#phone').focusin(function () {
+            $('#textphone').html('<img src="/Images/2.png" /> 请输入11位手机号');
+            PHONE = 2;
+
+        });
+        $('#phone').focusout(function () {
+            var pvalue = $('#phone').val();
+            if ($('#phone').val().length == 0) {//如果用户输入为空，就提示用户输入手机号码；
+                $('#textphone').html('<img src="/Images/1.png" />  请输入手机号码');
+                $('#phone').css('border', '1px solid red');
+            }
+            else {
+                //创建一个正则表达式验证电话号码：
+                var regexphone = /^(13|14|15|16|18|19)\d{9}$/;
+                var result = regexphone.test(pvalue);
+                if (result == true) {//在正则表达式验证正确；
+                    //将用户在用户名中文本框中输入的值传递到后台进行判断是否在数据库中已注册：
+                    $.post("/Account/UsernameExist", { username: pvalue }, function (data) {
+                        if (data == true) {
+                            $('#textphone').html('<img src="/Images/6.png" />');
+                            $('#phone').css('border', '1px solid green');
+                            PHONE = 1;
+                        }
+                        else {
+                            $('#textphone').html('<img src="/Images/5.png" /> 该手机号已注册');
+
+                        }
+                    });
+
+                }
+                else {
+                    $('#textphone').html('<img src="/Images/1.png" /> 手机号输入错误');
+                    $('#phone').css('border', '1px solid red');
+                }
+
+            }
+        });
+
+    }
+    //点击发送短信验证码：
+    var getverificationstate;//记录用户获取验证码是否成功的状态；
+    function getverification() {
+        var time = new Date();
+        var Currenttime = time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
+        $("#registtime").val(Currenttime);
+
+        var curtime = $("#registtime").val();
+        if (Inputpassword == 1 && Password == 1 && PHONE == 1) {
+            $('#sendcode').attr({ "disabled": true });
+            $('#sendcode').css('backgroundColor', 'gray');
+            var seconds = 60;
+            ReadSeconds(seconds);//读秒重新获取验证码；
+
+
+            var PhoneS = $('#phone').val();
+            $.post("/Account/Getverification", { phone: PhoneS, ctime: curtime }, function (data) {
+                //alert(data);
+                if (data == "获取验证码成功") {
+                    //$('#textphone').html('<img src="/Images/1.png" /> 该手机号已注册');
+                    //$('#phone').css('border', '1px solid red');
+                    getverificationstate = "成功接收验证码";
+                }
+                else {
+                    alert("请一分钟后重新获取验证码");
+                }
+            });
+        }
+        else {
+            alert("请正确填写注册信息");
+        }
+    }
+
+    function ReadSeconds(seconds) {
+        var msg = seconds + "秒后重新获取"
+        $('#sendcode').val(msg);
+        seconds--;
+       var stop= setTimeout(function () {
+            ReadSeconds(seconds);
+       }, 1000);
+       if (seconds<=0) {
+           clearTimeout(stop);
+           $('#sendcode').val("发送短信验证");
+           $('#sendcode').attr({ "disabled": false });
+           $('#sendcode').css('backgroundColor', '#74c621');
+       }
+    }
+
+
+    function CheckboxChange() {
+        var checked = $('#checkagree').is(':checked');//复选框被选中啦
+        if (getverificationstate == "成功接收验证码" && checked) {
+            $('#register').attr({ "disabled": false });
+            $('#register').css('backgroundColor', '#74c621');
+        }
+        else {
+            $('#register').attr({ "disabled": true });
+            $('#register').css('backgroundColor', 'gray');
+        }
+    }
+
+    //点击按钮注册：
+    function userregister() {
+        var Currenttime = $("#registtime").val();
+
+        var PhoneS = $('#phone').val();
+        var PwdS = $('#password').val();
+
+        var VerificationS = $('#verification').val();
+        $.post("/Account/RegisterMsg", { phone: PhoneS, pwd: PwdS, verification: VerificationS, ctime: Currenttime }, function (data) {
+            if (data) {
+                alert("注册成功");
+                window.location.href = "/YTTimeRent/Index";
+            }
+            else {
+                alert("注册失败");
+            }
+        });
+
+    }
+
+    //按下回车键，切换焦点：
+    function MyEnter(str, event) {
+        var e = event || window.event;
+        if (e.keyCode == 13) {
+            str.focus();
+        }
+    }
+    function YZMEnter(strs, event) {
+        var e = event || window.event;
+        if (e.keyCode == 13) {
+            strs.focus();
+            getverification();
+        }
+    }
+</script>
+
+<form action="/" method="post" name="form1">
+    <div class="register-content">
+        <section class="register">
+            <h2>用户注册</h2>
+            @*<div class="register-item">
+                <span>作废账号</span>
+                <input class="register-input" type="text"  name="username" id="username" placeholder="请输入您的用户名" onkeypress="MyEnter(form1.password,event)"/>
+                <span id="textname" style=" display:inline"></span>
+            </div>*@
+            <div class="register-item">
+                <span>手机号</span>
+                <input class="register-input" type="text" name="phone" id="phone" placeholder="请输入您的手机号" onkeypress="MyEnter(form1.password,event)" />
+                <span id="textphone" class="warnmsg"></span>
+            </div>
+            <div class="register-item">
+                <span>密码</span>
+                <input class="register-input" type="password" placeholder="6-16位密码" name="password" id="password" onkeypress="MyEnter(form1.confirmpassword,event)" />
+                <span id="textpass" class="warnmsg"></span>
+            </div>
+            <div class="register-item">
+                <span>确认密码</span>
+                <input class="register-input" type="password" placeholder="请再输入一遍" name="confirmpassword" id="confirmpassword" onkeypress="MyEnter(form1.verification,event)" />
+                <span id="textcpass" class="warnmsg"></span>
+            </div>
+
+            <div class="register-item">
+                <span>验证码</span>
+                <input class="register-input register-input-short" type="text" name="verification" id="verification" onkeypress="YZMEnter(form1.SendMname,event)" />
+                <span id="verspan" style="display: inline"></span>
+                <input type="button" name="SendMname" value="发送短信验证" class="register-btn-verify" id="sendcode" onclick="getverification()" />
+
+                @* <button class="register-btn-verify" id="sendcode"  onclick="getverification(this)">发送短信验证</button>*@
+
+                <span id="vcode" style="display: inline"></span>
+            </div>
+            <div class="register-item">
+                <input class="register-input-radio" type="checkbox" id="checkagree" onchange="CheckboxChange()" style="margin: 0 10px 0 68px" />同意<a class="agreement" data-toggle="modal" data-target="#myModalMess">江铃新能源商城协议</a>
+            </div>
+            <input type="button" value="立即注册" id="register" disabled="disabled" style="background: gray;" onclick="userregister()" class="register-btn" name="register" />
+            <input type="hidden" name="name" value="" id="registtime" />
+        </section>
+
+
+        <div class="aside">
+            <img src="/Content/img/Account/logo.png">
+            <p>欢迎加入江铃新能源汽车商城</p>
+            <p class="green">
+                更优惠的价格<br>
+                更优秀的配送
+            </p>
+            <p class="aside-login">已有账号请 <a href="/Account/Logon" class="register-btn-login">登录</a></p>
+        </div>
+
+    </div>
+
+</form>

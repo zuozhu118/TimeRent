@@ -1,0 +1,522 @@
+﻿
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-size: 12px;
+    color: #666666;
+    font-family: "微软雅黑";
+}
+
+a
+{
+    text-decoration: none;
+    color: #7f7f7f;
+    outline: none;
+}
+
+li
+{
+    list-style: none;
+}
+
+.head-table
+{
+    display: table;
+    margin: 0 auto;
+    height: 103px;
+    width: 1024px;
+}
+
+    .head-table li
+    {
+        display: table-cell;
+        height: 103px;
+        vertical-align: middle;
+    }
+
+.head-li1
+{
+    color: #71c520;
+    font-size: 32px;
+}
+
+.head-li2
+{
+    position: relative;
+    left: 494px;
+}
+
+    .head-li2 li
+    {
+        width: 124px;
+        text-align: center;
+        border: 1px solid #e2e2e2;
+        border-bottom: none;
+    }
+
+    .head-li2 strong
+    {
+        font-size: 24px;
+        color: #71c520;
+    }
+
+.contain
+{
+    margin: 0 auto;
+    width: 1028px;
+    /*border: 1px solid red;*/
+}
+
+.contain-left
+{
+    display: inline-block;
+    border: 1px solid #dadada;
+    /*border: 1px solid green;*/
+    border-radius: 3px;
+    /*height: 478px;*/
+    width: 200px;
+    vertical-align: top;
+}
+
+    .contain-left li
+    {
+        height: 44px;
+        line-height: 44px;
+    }
+
+    .contain-left p
+    {
+        font-size: 16px;
+        padding-left: 10px;
+        border-bottom: 1px solid #dadada;
+        border-top: 1px solid #dadada;
+    }
+
+    .contain-left a
+    {
+        padding-left: 10px;
+    }
+
+.contain-big-ritht
+{
+    display: inline-block;
+    width: 800px;
+    margin-left: 20px;
+}
+
+.contain-right
+{
+    display: inline-block;
+    border: 1px solid #dadada;
+    /*border: 1px solid blue;*/
+    border-top: 0px;
+    width: 800px;
+    padding-bottom: 48px;
+    vertical-align: middle;
+}
+
+.rentorder
+{
+    height: 62px;
+    width: 100%;
+    line-height: 62px;
+    border-top: 1px solid #dadada;
+}
+
+.rentorder span
+{
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 178px;
+}
+
+.cardP
+{
+    font-size: 20px;
+    padding-left: 30px;
+    /*border: 1px solid red;*/
+}
+
+.Amoney
+{
+    color: #ff6101;
+}
+
+.RechargeBtn
+{
+    margin-left: 20px;
+    height: 30px;
+    width: 60px;
+    background-color: #74c621;
+    color: #ffffff;
+    visibility: hidden;
+}
+
+.order
+{
+    display: inline-block;
+    position: relative;
+    line-height: 30px;
+    border: 1px solid #dadada;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 160px;
+    /*border:1px solid red;*/
+    margin-left: 10px;
+}
+
+.rentorder input[type=text]
+{
+    height: 30px;
+    width: 100%;
+    border: 0px;
+    /*border:1px solid red;*/
+}
+
+.rentorder input[type=button]
+{
+    width: 71px;
+    height: 30px;
+    margin-left: 16px;
+    background-color: white;
+    border: 1px solid #dadada;
+}
+
+.table-row
+{
+    display: table-row;
+}
+
+    .table-row li
+    {
+        display: table-cell;
+        height: 35px;
+        width: 120px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 16px;
+        border: 1px solid #dadada;
+    }
+
+        .table-row li a:hover
+        {
+            /*color:#fff;*/
+            text-decoration: none;
+        }
+
+.table-row-group
+{
+    margin-top: 22px;
+    width: 100%;
+    /*border: 1px solid red;*/
+}
+
+#orderzero
+{
+    margin: 0 auto;
+    /*border: 1px solid blue;*/
+    text-align: center;
+    font-size: 18px;
+}
+
+    #orderzero li
+    {
+        margin-top: 20px;
+    }
+
+        #orderzero li input[type=button]
+        {
+            width: 103px;
+            height: 37px;
+            background-color: #74c621;
+            color: #f0faec;
+            text-align: center;
+            line-height: 37px;
+            border-radius: 5px;
+        }
+
+.order-table
+{
+    margin: 0 auto;
+    /*border: 1px solid green;*/
+}
+
+    .order-table th, td
+    {
+        width: 60px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+#orderstatus a
+{
+    text-decoration: underline;
+    color: red;
+}
+
+.ordernum
+{
+    width: 240px;
+}
+
+.order-table tbody td
+{
+    border-bottom: 1px solid #dadada;
+    padding-top: 10px;
+}
+
+.msgtd
+{
+    width: 260px;
+    overflow: hidden;
+    /*border: 1px solid red;*/
+}
+
+
+.totalprice-td
+{
+    width: 60px;
+}
+
+.adress
+{
+    display: inline-block;
+    position:relative;
+    overflow:hidden;
+    /*border: 1px solid green;*/
+}
+    .adress>span:first-of-type
+    {
+        /*border: 1px solid blue;*/
+        /*float:left;*/
+       /*margin-left:20px;*/
+    }
+.orderone
+{
+    /*padding-left: 5px;*/
+}
+
+.adress img
+{
+    /*position:absolute;
+    left:0;*/
+    
+   /**/ float:left;
+}
+
+.timespan
+{
+    display:block;
+}
+
+.foot
+{
+    margin-top: 26px;
+    height: 138px;
+    border: 1px solid #dadada;
+}
+
+    .foot p
+    {
+        padding-left: 8px;
+        margin: 0px;
+    }
+
+    .foot .p1
+    {
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        color: #656565;
+        /*border: 1px solid red;*/
+    }
+
+.p1 ~ p
+{
+    height: 30px;
+    line-height: 30px;
+    /*border: 1px solid green;*/
+}
+
+.mycoupon
+{
+    display: inline-block;
+    font-size: 18px;
+    /*border: 1px solid red;*/
+    vertical-align: middle;
+    margin-left: 28px;
+    width: 230px;
+    height: 37px;
+    line-height: 37px;
+    margin-right: 100px;
+}
+
+    .mycoupon p
+    {
+        display: inline;
+    }
+
+    .mycoupon span
+    {
+        /*border: 1px solid red;*/
+        margin-left: 5px;
+        margin-right: 0px;
+        color: #73c722;
+        line-height: 20px;
+    }
+
+.couponstate
+{
+    display: inline-block;
+    height: 37px;
+    /*margin-left: 130px;*/
+    vertical-align: middle;
+    /*border: 1px solid blue;*/
+}
+
+    .couponstate li
+    {
+        /*border: 1px solid green;*/
+        display: table-cell;
+        border: 1px solid #dbdbdb;
+        line-height: 37px;
+        width: 92px;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+.couponMSG
+{
+    display: table;
+    margin: 0 auto;
+    margin-top: 52px;
+}
+
+    .couponMSG ul
+    {
+        display: table-row;
+    }
+
+    .couponMSG li
+    {
+        display: table-cell;
+        width: 344px;
+        height: 150px;
+        vertical-align: middle;
+        /*border: 1px solid green;*/
+        /*text-align:center;*/
+    }
+
+.aviablecoupon
+{
+    margin-left: 28px;
+    background: url("/Images/yhq_03.png" );
+}
+
+.couponMSG p
+{
+    padding-left: 48px;
+    /*border: 1px solid red;*/
+}
+
+.overdue
+{
+    position: relative;
+    left: 15px;
+    background: url("/Images/yhq_05.png" );
+}
+
+.couponPone
+{
+    font-size: 20px;
+    color: #fefffc;
+}
+
+.couponPtwo
+{
+    font-size: 14px;
+    position: relative;
+    top: 30px;
+}
+
+.couponmoney
+{
+    font-size: 42px;
+}
+
+    .couponmoney ~ span
+    {
+        position: relative;
+        margin-left: 75px;
+    }
+
+.paginator
+{
+    position: relative;
+    top: 20px;
+}
+
+.box
+{
+    /*margin:0px auto;*/
+    text-align: center;
+    /*border: 1px solid red;*/
+}
+
+.fl
+{
+    display: inline-block;
+    margin-right: 10px;
+    /*line-height: 2;*/
+    text-align: center;
+    font-size: 14px;
+}
+
+    .fl div
+    {
+        margin-top: 40px;
+    }
+
+    .fl label, .box p
+    {
+        margin-top: 20px;
+    }
+
+
+
+    .fl span
+    {
+        position: relative;
+        top: 20px;
+        /*border:1px solid;*/
+    }
+
+.imgbox
+{
+    border: 0.6px solid;
+    width: 250px;
+    height: 250px;
+    line-height: 200px;
+}
+
+    .imgbox img
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+label
+{
+    width: 170px;
+    height: 36px;
+    line-height: 36px;
+    background: #74c621;
+    color: #fff;
+    cursor: pointer;
+}

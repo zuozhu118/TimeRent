@@ -1,0 +1,364 @@
+﻿body
+{
+    font-family: 微软雅黑;
+    font-size: 12px;
+    color: #747474;
+}
+
+.TheBigest
+{
+    margin: 0 auto;
+    margin-top: 32px;
+    width: 930px;
+}
+
+    .TheBigest .TheLeft
+    {
+        /*border: 1px solid blue;*/
+        width: 556px;
+        float: left;
+    }
+
+.TheLeft .basicmsgP
+{
+    height: 46px;
+    width: 556px;
+    line-height: 46px;
+    background-color: #74c621;
+    color: #fefffc;
+    font-size: 18px;
+    padding-left: 11px;
+}
+
+.TheLeft .carimg
+{
+    position: relative;
+    top: -10px;
+    width: 245px;
+    height: 130px;
+    border: 1px solid #b5b5b5;
+    border-bottom: none;
+    border-top: none;
+    line-height: 130px;
+    text-align: center;
+}
+
+.carimg img
+{
+    vertical-align: top;
+    padding:10px;
+    width: 80%;
+    height: 100%;
+}
+
+.TheLeft .shoptime
+{
+    position: relative;
+    top: -140px;
+    width: 310px;
+    height: 130px;
+    float: right;
+    padding-left: 12px;
+      padding-top: 9px;
+    border-right: 1px solid #b5b5b5;
+}
+
+.shoptime p
+{
+     line-height: 6px;
+     /*border:1px solid red;*/
+}
+
+.shoptime strong
+{
+    font-size: 14px;
+}
+
+.shoptime span
+{
+    margin-right: 18px;
+}
+
+.TheLeft .Order
+{
+    border: 1px solid #b5b5b5;
+    width: 556px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    position: relative;
+    top: -140px;
+    padding-left: 12px;
+}
+
+.TheLeft .TheLeft-two
+{
+    position: relative;
+    /*height: 515px;*/
+    width: 100%;
+    border: 1px solid #b5b5b5;
+    top: -120px;
+}
+
+.TheLeft-two .deposit
+{
+    border-bottom: 1px dashed #bebebe;
+    margin-top: -10px;
+    margin-left: 22px;
+    height: 77px;
+    width: 509px;
+    line-height: 77px;
+}
+
+.payway
+{
+    border: 1px solid #dddddd;
+    padding-left:12px;
+}
+
+    .payway div
+    {
+        height: 50px;
+        line-height:50px;
+        font-size: 16px;
+        /*border: 1px solid blue;*/
+    }
+
+    .payway .payway-div0
+    {
+        color: #ff9546;
+        border-bottom:1px solid #dddddd;
+    }
+
+.payway p
+{
+    display:inline-block;
+   position:absolute;
+    left:400px;
+     /*border: 1px solid green;*/
+}
+
+    .payway .paycount
+    {
+        color: #ff9546;
+    }
+    .payway input[type=radio]
+    {
+        margin-right:3px;
+    }
+
+
+strong
+{
+    color: #333333;
+    font-size: 18px;
+}
+
+.deposit span
+{
+    position: absolute;
+    line-height: 77px;
+    color: #ff6700;
+    font-size: 22px;
+    right: 57px;
+}
+
+.deposit .special
+{
+    position: static;
+    color: #656565;
+    font-size: 14px;
+}
+
+.TheLeft-two .ordertotalprice
+{
+    font-size: 18px;
+    height: 77px;
+    line-height: 77px;
+    padding-left: 200px;
+    border-top: 1px solid #b5b5b5;
+    margin-bottom: 0px;
+}
+
+.ordertotal
+{
+    border-bottom: 1px solid orange;
+    margin-top: -10px;
+}
+
+.ordertotalprice span
+{
+    font-size: 22px;
+    color: #ff6700;
+    margin-right: 41px;
+}
+
+.ordertotalprice input[type=button]
+{
+    width: 106px;
+    height: 44px;
+    background-color: #74c621;
+    text-align: center;
+    line-height: 44px;
+    color: #f7fef4;
+    margin-right: 18px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.TheLeft-two .invoice
+{
+    margin-left: 22px;
+    font-size: 18px;
+    height: 77px;
+    line-height: 77px;
+    margin-top: -10px;
+}
+
+.invoice span
+{
+    margin-left: 16px;
+}
+
+.invoice img
+{
+    -moz-appearance: none;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+.invoice .tishi
+{
+    font-size: 14px;
+    color: #a1a1a1;
+}
+
+.TheBigest .TheReight
+{
+    float: right;
+    display: inline-block;
+    left: 16px;
+    border: 1px solid #b5b5b5;
+    width: 360px;
+    height: 584px;
+}
+
+.TheReight .baiduMAP
+{
+    height: 280px;
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.TheReight .TheReightone
+{
+    /*padding-left:12px;*/
+    line-height: 150%;
+}
+
+.TheReight .adress
+{
+    margin-top: 10px;
+    border-bottom: 1px solid #b5b5b5;
+    width: 360px;
+    padding-left: 12px;
+}
+
+.feiyong
+{
+    padding-left: 12px;
+    padding-top: 15px;
+}
+
+    .feiyong p
+    {
+        line-height: 200%;
+    }
+
+.TheReight strong
+{
+    margin-right: 12px;
+    margin-top: 18px;
+}
+
+.invoiceMsg
+{
+    height: 296px;
+    display: none;
+}
+
+    .invoiceMsg p
+    {
+        padding-left: 12px;
+        margin-bottom: 18px;
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .invoiceMsg .adressselect
+    {
+        height: 38px;
+        line-height: 38px;
+        padding-left: 12px;
+    }
+
+    .invoiceMsg .invoicefirst
+    {
+        width: 260px;
+    }
+
+    .invoiceMsg input
+    {
+        position: absolute;
+        padding-left: 3px;
+        height: 38px;
+        width: 135px;
+        left: 88px;
+        border: 1px solid #b5b5b5;
+    }
+
+.adressselect select
+{
+    border: 1px solid #b5b5b5;
+    height: 38px;
+    width: 135px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    background: url("/Images/xl_03.png") no-repeat scroll right center transparent;
+}
+
+.adressselect .selectone
+{
+    position: absolute;
+    left: 88px;
+}
+
+.adressselect .selecttwo
+{
+    position: relative;
+    float: left;
+    left: 220px;
+    margin-right: 10px;
+}
+
+.adressselect strong
+{
+    font-size: 14px;
+    color: #a1a1a1;
+    position: absolute;
+    left: 12px;
+    /*border:1px solid red;*/
+}
+
+.invoiceMsg .zhunqueadress
+{
+    width: 280px;
+}
+
+.invoiceMsg .youzheng
+{
+    position: relative;
+    float: left;
+    left: 365px;
+}

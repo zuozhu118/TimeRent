@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Logon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/Content/Account/Logon.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var chechidden = $('#checkhidden').val();
+        //alert(chechidden);
+        if (chechidden == "checked") {
+            $("#checkbox").attr("checked", "checked");
+        }
+        else {
+            $("#checkbox").removeAttr("checked");
+        }
+    });
+
+   //判断用户登录是否正确logon方法；
+   function logonjudge() {
+            var Accountname = document.getElementById("AccountName").value;
+            var Password = document.getElementById("Password").value;
+            var Message = document.getElementById("message");
+
+            var Checke = "";
+            if ($("#checkbox").is(":checked")) {
+                Checke = "checked";    
+            }
+            
+            if (Accountname.length==0) {
+                Message.innerHTML = '<img src="/Images/1.png" /> 账号不能为空 !';
+            }
+            else {
+                if (Password.length == 0) {
+                    Message.innerHTML = '<img src="/Images/1.png" /> 你还没用输入密码 !';
+                }
+                else {
+                    $.post("/Account/LogonJudge", { accountname: Accountname, password: Password, check: Checke }, function (data) {
+                        if (data == "用户名错误") {
+                            Message.innerHTML = '<img src="/Images/1.png" /> 账号输入错误，请重新输入 !';
+                        }
+                        else {
+                            if (data == "密码错误") {
+                                Message.innerHTML = '<img src="/Images/1.png" /> 密码错误，<a href="#">忘记密码？</a>';
+                            }
+                            else {
+                                Message.innerHTML = '<img src="/Images/6.png" /> 登录成功，正在跳转！';
+                                Message.style.color = "green";
+                                window.location.href = "/YTTimeRent/Index";
+                                //history.go(-1);//返回上一页不刷新
+                                //window.location.href = document.referrer;//返回上一页并刷新 
+                                //window.history.back();
+                            }
+                        }
+                    });//post方法结尾；
+                }
+            }//第一个else结尾
+   }//logon方法结尾;
+
+    //onkeypress 事件会在键盘按键被按下并释放一个键时发生。
+    //按下回车键，切换焦点；
+   function UserEnter(str, event) {  //str密码框对象；
+       var e = event || window.event;
+       if (e.keyCode == 13) { //keyCode == 13表示用户按下了回车键；
+           str.focus();
+       }
+   }
+   function PwdEnter(str,event) {//str表示‘登录’按钮对象；
+       var e = event || window.event;
+       if (e.keyCode == 13) {
+           str.focus();
+           str.click();//点击‘登录’；
+       }
+   }
+
+</script>
+<div id="div1">
+    <form action="/" method="post" name="form1">
+        <div id="divone">
+            <p>用户登录</p>
+            <span id="message"></span>
+            <div class="logincl">账号<input type="text" id="AccountName" name="Username" value="@Model.user" onkeypress="UserEnter(form1.psssname,event)" /></div>
+            <div class="logincl" >密码<input type="password" id="Password" name="psssname" value="@Model.password"  onkeypress="PwdEnter(form1.Loginname,event)"/></div>
+                <div id="divtwo">
+                    
+                        <input type="checkbox" name="name"  id="checkbox"/>记住我 
+                    <input type="hidden" id="checkhidden" name="name" value="@Model.checke" />
+
+
+                    <input type="button" onclick="logonjudge()" value="登录 " name="Loginname" />
+                </div>
+             <div id="divthree"><a href="/Account/Register">立即注册账号</a></div>
+       </div>
+   </form>
+</div>

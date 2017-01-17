@@ -1,0 +1,103 @@
+ul {margin: 0; padding: 0;}
+li {margin: 0; padding: 0; list-style: none;}
+
+a {text-decoration: none;}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Hiragino Sans GB, Microsoft YaHei;
+    font-size: 16px;
+    min-width: 1024px;
+}
+
+header {
+    width: 100%;
+    background: #2e3034 url("../img/nav_bg.png") repeat-x;
+}
+
+.header-center {
+    color: #d6d6d6;
+    width: 1024px;
+    height: 92px;
+    margin: 0 auto;
+}
+
+header a:visited, header a:link {
+    color: #d6d6d6;
+}
+
+img.logo {
+    margin: 25px 0 0 25px;
+    float: left;
+}
+
+div.top-nav {
+    margin-left: 50px;
+    float: left;
+}
+
+div.top-nav ul li {
+    line-height: 92px;
+    margin-right: 50px;
+    display: inline-block;
+}
+
+/*img.search {
+    margin: 36px 50px 0 0;
+    float: left;
+}*/
+
+div.top-log {
+    font-size: 12px;
+    line-height: 92px;
+    margin-right: 50px;
+    float: left;
+}
+
+
+footer {
+    background-color: #e9e9e9;
+    color: #747474;
+    font-family: Verdana;
+    font-size: 10px;
+    width: 100%;
+    padding-top: 20px;
+    float: left;
+    clear: both;
+}
+
+div.footer-center {
+    width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+div.footer-center ul {
+    margin: 8px 110px 0 0;
+    float: left;
+}
+
+div.footer-center ul:first-child {
+    margin-left: 80px;
+}
+
+div.footer-center ul li {
+    margin-bottom: 4px;
+}
+
+div.footer-center ul li:first-child {
+    font-size: 14px;
+}
+
+.foot-contact {
+    line-height: 25px;
+}
+
+.footer-bottom {
+    background-color: #afafaf;
+    color: #d6d6d6;
+    text-align: center;
+    line-height: 32px;
+    margin-top: 20px;
+}

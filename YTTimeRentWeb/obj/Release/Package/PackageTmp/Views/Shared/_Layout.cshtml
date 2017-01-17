@@ -1,0 +1,218 @@
+﻿@{
+    string accname = Session["ACCOUNTNAME"] as string;
+
+    object accountId = Session["IDS"];
+    if (accountId != null)
+    {
+        accountId = accountId.ToString();
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        body
+        {
+            font-size: 12px;
+            font-family: "微软雅黑";
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        a
+        {
+            text-decoration: none;
+            color: white;
+        }
+
+        li
+        {
+            list-style: none;
+        }
+
+        .header
+        {
+            width: 100%;
+            height: 76px;
+            line-height: 76px;
+            background-color: #313131;
+            overflow: hidden;
+        }
+
+        .header-box
+        {
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        .nav img
+        {
+            float: left;
+            margin-top: 14px;
+        }
+
+        .nav
+        {
+            overflow: hidden;
+        }
+
+        .top-nav
+        {
+            float: left;
+            margin-left: 50px;
+        }
+
+            .top-nav a
+            {
+                color: white;
+                font-size: 16px;
+                margin: 0 10px;
+            }
+
+                .top-nav a:hover
+                {
+                    color: #74c522;
+                }
+
+        .bottom-nav
+        {
+            color: white;
+            float: right;
+        }
+
+        .search
+        {
+            padding-top: 12px;
+        }
+
+        .top-logs
+        {
+            /*border: 1px solid green;*/
+        }
+
+            .top-logs span
+            {
+                display: inline;
+                overflow: hidden;
+                /*border: 1px solid red;*/
+                padding-right: 10px;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <title>江铃新能源</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link href="@Url.Content("~/Content/shared/master.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/shared/nav.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/rent/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="page">
+        <header>
+            <div class="header">
+                <div class="header-box">
+                    <div class="nav">
+                        <a href="/home/Homepage">
+                            <img style="margin-right: 60px;" src="/content/img/shared/logo.png" /></a>
+                        <ul style="margin-left: 50px;" class="menu1">
+                            <li><a href="javascript::">产品展示</a></li>
+                            <li><a href="javascript::">在线售车</a></li>
+                            <li><a href="/YTTimeRent/Index" style="color: #74c521">分时租赁</a></li>
+                            <li><a href="javascript::">预售</a></li>
+                            <li><a href="javascript::">预约试驾</a></li>
+                            <li class="javascript::"><a href="#" rel='dropmenu6'>服务帮助</a>
+                                <ul style="height: 60px;">
+                                    <li style="margin-top: 10px;"><a href="javascript::">常见问题</a></li>
+                                    <li style="margin-top: 0px;"><a href="javascript::">查看经销商</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript::">关于我们</a></li>
+                        </ul>
+                        <div class="bottom-nav" style="width: 260px; text-align: center; margin-right: 40px;">
+
+                            @if (accname != null)//用户已经登录成功了
+                            {
+                                <div style="line-height: 76px;" class="top-logs">
+                                    <span style="color: white;">@accname</span>|
+                        <a href="/PersonalCenter/index" style="color: White"><span>个人中心</span></a>|
+                        <a href="/Account/Logout" style="color: White"><span>注销</span></a>
+                                    <input type="hidden" name="name" id="Account_id" value="@accountId" />
+                                </div>
+                            }
+                            else
+                            {
+                                <div style="line-height: 76px;" class="top-logs">
+                                    <a style="color: White" href="/Account/Logon"><span id="denglulink">登录</span></a>|
+                        <a href="/Account/Register" style="color: White"><span>注册</span></a>
+                                </div>
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer" style="margin-top: 28px;">
+            <footer>
+                <div class="footer-center">
+                    <ul>
+                        <li>购车相关</li>
+                        <li><a>购车流程</a></li>
+                        <li><a>支付&分期</a></li>
+                        <li><a>提车相关</a></li>
+                        <li><a>客服支持</a></li>
+                    </ul>
+
+                    <ul>
+                        <li>租车相关</li>
+                        <li><a>租车流程</a></li>
+                        <li><a>支付优惠</a></li>
+                        <li><a>租车服务</a></li>
+                        <li><a>支付授权</a></li>
+                    </ul>
+
+                    <ul>
+                        <li>服务承诺</li>
+                        <li><a>支付款安全</a></li>
+                        <li><a>随时退款</a></li>
+                        <li><a>体验店服务</a></li>
+                        <li><a>全程客服</a></li>
+                    </ul>
+
+                    <ul>
+                        <li>关于我们</li>
+                        <li><a>和谐江铃</a></li>
+                        <li><a>绿色企业</a></li>
+                        <li><a>社会责任</a></li>
+                        <li><a>联系我们</a></li>
+                    </ul>
+
+                    <ul>
+                        <li>关注我们</li>
+                        <li class="foot-contact"><a>
+                            <img src="/content/img/shared/weibo.png">
+                            新能源官方微博</a></li>
+                        <li class="foot-contact"><a>
+                            <img src="/content/img/shared/phone.png">
+                            热线:0791-82211129</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">Copyright 江铃新能源汽车有限公司</div>@*<span id="footercarname"></span>*@
+
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
